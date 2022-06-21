@@ -1,0 +1,30 @@
+﻿<Window x:Class="_06.样式基础.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:_06.样式基础"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="baseButton" TargetType="Button">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="Background" Value="LightYellow" />
+        </Style>
+        <!--  继承上面的样式  -->
+        <Style x:Key="mybtn"
+               BasedOn="{StaticResource baseButton}"
+               TargetType="Button">
+            <Setter Property="Foreground" Value="Red" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Button Content="按钮1" Style="{StaticResource mybtn}" />
+            <Button Background="Yellow" Content="按钮2" />
+            <Button Background="Blue" Content="按钮3" />
+        </StackPanel>
+    </Grid>
+</Window>

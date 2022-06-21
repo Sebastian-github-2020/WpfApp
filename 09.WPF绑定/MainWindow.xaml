@@ -1,0 +1,33 @@
+﻿<Window
+    x:Class="_09.WPF绑定.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_09.WPF绑定"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Slider
+                x:Name="slider"
+                Maximum="100"
+                Minimum="1" />
+            <!--  绑定slider的属性 默认是value 而且是双向绑定，注意TextBox需要失去焦点后才会更新 value到slider  -->
+            <TextBox
+                Height="30"
+                Margin="10,0"
+                Text="{Binding ElementName=slider, Path=Value}" />
+            <TextBox
+                Height="30"
+                Margin="10,0"
+                Text="{Binding ElementName=slider, Path=Value, Mode=OneWay}" />
+            <TextBox
+                Height="30"
+                Margin="10,0"
+                Text="{Binding Name}" />
+        </StackPanel>
+    </Grid>
+</Window>

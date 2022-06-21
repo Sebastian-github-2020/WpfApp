@@ -1,0 +1,19 @@
+﻿<Window x:Class="_02.StackPanel布局.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02.StackPanel布局"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal" >
+        <Border Background="AntiqueWhite">
+            <Label Content="lable" Background="Red" FontSize="30" FontWeight="ExtraBold" Width="100" Height="50"/>
+        </Border>
+        <Border Background="Red">
+            <Label Content="lable" FontSize="30" Background="Yellow" FontWeight="ExtraBold"/>
+        </Border>
+        <Label Content="lable" FontSize="30" FontWeight="ExtraBold"/>
+        <Label Content="lable" FontSize="30" FontWeight="ExtraBold"/>
+    </StackPanel>
+</Window>
