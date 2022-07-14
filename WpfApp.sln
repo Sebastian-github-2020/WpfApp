@@ -29,25 +29,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.MVVM框架", "11.MVVM框
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.资源基础", "12.资源基础\12.资源基础.csproj", "{52A4D484-2C13-4108-9740-BF19F6DC8CD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.作业-小盒子", "13.作业-小盒子\13.作业-小盒子.csproj", "{9ADC6FA2-36DE-4202-B6A0-9600AB17FCE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.作业-小盒子", "13.作业-小盒子\13.作业-小盒子.csproj", "{9ADC6FA2-36DE-4202-B6A0-9600AB17FCE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.控件ToolTip", "13.控件ToolTip\14.控件ToolTip.csproj", "{086BA216-7AF9-42F9-919E-2CB2271E6C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.控件ToolTip", "13.控件ToolTip\14.控件ToolTip.csproj", "{086BA216-7AF9-42F9-919E-2CB2271E6C4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.控件GroupBox", "15.控件GroupBox\15.控件GroupBox.csproj", "{2144893C-5E83-4CEC-95AE-7A526615A72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.控件GroupBox", "15.控件GroupBox\15.控件GroupBox.csproj", "{2144893C-5E83-4CEC-95AE-7A526615A72E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.控件Expand", "16.控件Expand\16.控件Expand.csproj", "{786B3FC9-735B-4613-97F3-EF36C707B718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16.控件Expand", "16.控件Expand\16.控件Expand.csproj", "{786B3FC9-735B-4613-97F3-EF36C707B718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.控件Frame", "17.控件Frame\17.控件Frame.csproj", "{AE7BE6C4-61C9-41A3-9466-B3FED7243530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17.控件Frame", "17.控件Frame\17.控件Frame.csproj", "{AE7BE6C4-61C9-41A3-9466-B3FED7243530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.控件RichTextBox", "18.控件RichTextBox\18.控件RichTextBox.csproj", "{A5EDA525-CB27-4C85-8157-B2BFB7F96D39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18.控件RichTextBox", "18.控件RichTextBox\18.控件RichTextBox.csproj", "{A5EDA525-CB27-4C85-8157-B2BFB7F96D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.控件ComboBox", "19.控件ComboBox\19.控件ComboBox.csproj", "{2AECD6A7-4019-4FB7-A09D-8B638A4ECF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19.控件ComboBox", "19.控件ComboBox\19.控件ComboBox.csproj", "{2AECD6A7-4019-4FB7-A09D-8B638A4ECF5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.webview2", "20.webview2\20.webview2.csproj", "{F4296B8F-D685-4F8B-84F9-D46E6F1A4DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20.webview2", "20.webview2\20.webview2.csproj", "{F4296B8F-D685-4F8B-84F9-D46E6F1A4DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21.webviewChrome内核", "21.webviewChrome内核\21.webviewChrome内核.csproj", "{4B3966A7-2DAD-44C3-A39D-E4C180F6F2DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21.webviewChrome内核", "21.webviewChrome内核\21.webviewChrome内核.csproj", "{4B3966A7-2DAD-44C3-A39D-E4C180F6F2DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "小盒子framework", "小盒子framework\小盒子framework.csproj", "{EA65E80E-A986-4334-8687-0193C5C76731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22.小盒子framework", "小盒子framework\22.小盒子framework.csproj", "{EA65E80E-A986-4334-8687-0193C5C76731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23.登录窗体", "登录窗体\23.登录窗体.csproj", "{1A1D83E1-D17E-4953-8877-A239E91CE324}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -241,6 +243,14 @@ Global
 		{EA65E80E-A986-4334-8687-0193C5C76731}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA65E80E-A986-4334-8687-0193C5C76731}.Release|x86.ActiveCfg = Release|Any CPU
 		{EA65E80E-A986-4334-8687-0193C5C76731}.Release|x86.Build.0 = Release|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A1D83E1-D17E-4953-8877-A239E91CE324}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

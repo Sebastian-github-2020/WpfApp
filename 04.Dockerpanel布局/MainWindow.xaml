@@ -10,11 +10,11 @@
         mc:Ignorable="d">
     <Grid>
         <DockPanel LastChildFill="True">
-            <Button Content="按钮"
+            <Button Content="按left钮"
                     DockPanel.Dock="Left"
                     FontSize="30"
                     FontWeight="Bold" />
-            <Button Content="按钮"
+            <Button Content="按钮right"
                     DockPanel.Dock="Right"
                     FontSize="30"
                     FontWeight="Bold" />
