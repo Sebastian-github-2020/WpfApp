@@ -1,0 +1,26 @@
+﻿<Window x:Class="_18.控件RichTextBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_18.控件RichTextBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <RichTextBox >
+            <!--流文档-->
+            <FlowDocument>
+                <!--段落-->
+                <Paragraph>
+                    待到秋来九月八，
+                    <Bold>我花开时百花杀</Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Run>
+                        冲天香阵透长安，满城尽带黄金甲
+                    </Run>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
