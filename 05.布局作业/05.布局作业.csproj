@@ -6,6 +6,8 @@
     <RootNamespace>_05.布局作业</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath>C:\Users\zaks\Desktop\realease</BaseOutputPath>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
 </Project>

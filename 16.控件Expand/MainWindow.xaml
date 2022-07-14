@@ -1,0 +1,28 @@
+﻿<Window x:Class="_16.控件Expand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_16.控件Expand"
+        mc:Ignorable="d"
+        Title="折叠框" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+ 
+        <Expander Header="折叠框" Width="100" Foreground="Red" IsExpanded="False" BorderThickness="2" BorderBrush="Teal" ExpandDirection="Down">
+            <StackPanel Orientation="Vertical">
+                <TextBlock TextWrapping="Wrap">
+                    待到秋来九月八，我花开后百花杀。
+冲天香阵透长安，满城尽带黄金甲。
+                </TextBlock>
+            </StackPanel>
+        </Expander>
+    </Grid>
+</Window>

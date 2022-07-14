@@ -1,0 +1,30 @@
+﻿<Window x:Class="_19.控件ComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_19.控件ComboBox"
+       
+   
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <StackPanel.Resources>
+            <local:Models x:Key="asd"/>
+        </StackPanel.Resources>
+        <!--使用读取数据列表的方式创建item 读取的内容就是ComboBoxItem 而不是预想的字符串-->
+        <!--注意这里使用了Text，IsEditable，IsReadOnly三个属性，单独使用Text 并不会显示，可以编辑才会显示，配合readonly就好了-->
+        <ComboBox Width="100" x:Name="com" Text="选择语言" ItemsSource="{StaticResource asd}" IsEditable="True" IsReadOnly="True">
+            <!--<ComboBoxItem >
+                c#
+            </ComboBoxItem>
+            <ComboBoxItem>
+                js
+            </ComboBoxItem>
+            <ComboBoxItem>
+                python
+            </ComboBoxItem>-->
+        </ComboBox>
+        <TextBlock Text="{Binding ElementName=com,Path=SelectedValue}"/>
+    </StackPanel>
+</Window>

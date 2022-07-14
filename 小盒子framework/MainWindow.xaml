@@ -1,0 +1,24 @@
+﻿<Window x:Class="小盒子framework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:小盒子framework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" KeyDown="grid_KeyDown">
+    <Grid Background="Teal" ShowGridLines="True"  Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Background="White" Grid.Column="{Binding Column}" Grid.Row="{Binding Row}">
+
+        </Border>
+    </Grid>
+</Window>
