@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.WPF命令", "10.WPF命�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.MVVM框架", "11.MVVM框架\11.MVVM框架.csproj", "{23FEF864-3E33-4C97-A390-BFBD6E4C619B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.资源基础", "12.资源基础\12.资源基础.csproj", "{52A4D484-2C13-4108-9740-BF19F6DC8CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.资源基础", "12.资源基础\12.资源基础.csproj", "{52A4D484-2C13-4108-9740-BF19F6DC8CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

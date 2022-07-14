@@ -29,7 +29,7 @@ namespace _12.资源基础 {
         /// <param name="e"></param>
         private void update_Click(object sender, RoutedEventArgs e) {
             // 1. 找到资源
-            this.Resources["solidColor"] = new SolidColorBrush(Colors.Yellow);
+            this.Resources["SolideColor"] = new SolidColorBrush(Colors.Yellow);
         }
     }
 }
