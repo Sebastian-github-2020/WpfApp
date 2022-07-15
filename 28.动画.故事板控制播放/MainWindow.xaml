@@ -1,0 +1,54 @@
+﻿<Window x:Class="_28.动画.故事板控制播放.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_28.动画.故事板控制播放"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Triggers>
+        <EventTrigger SourceName="cmdStart" RoutedEvent="Button.Click">
+            <BeginStoryboard Name="fadeStoryboardBegin">
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="imgDay" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:2"></DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger SourceName="cmdPause" RoutedEvent="Button.Click">
+            <PauseStoryboard BeginStoryboardName="fadeStoryboardBegin"></PauseStoryboard>
+        </EventTrigger>
+        <EventTrigger SourceName="cmdResume" RoutedEvent="Button.Click">
+            <RemoveStoryboard BeginStoryboardName="fadeStoryboardBegin"></RemoveStoryboard>
+        </EventTrigger>
+        <EventTrigger SourceName="cmdStop" RoutedEvent="Button.Click">
+            <StopStoryboard BeginStoryboardName="fadeStoryboardBegin"></StopStoryboard>
+        </EventTrigger>
+        <EventTrigger SourceName="cmdMiddle" RoutedEvent="Button.Click">
+            <SeekStoryboard BeginStoryboardName="fadeStoryboardBegin" Offset="0:0:1"></SeekStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <!--一旦创建故事板，就可以用其他动作控制故事板。这些动作都继承自ControllableStoryboardAction类。-->
+    <!--PauseStoryboard	停止播放动画并且保持其当前位置。
+ResumeStroyboard	恢复播放暂停的动画。
+StopStoryboard	停止播放动画，并将动画时钟重新设置到开始位置。
+SeekStoryboard	跳到动画线中的特定位置。如果动画正在播放，就继续从新位置播放。如果动画是暂停的，就继续保持暂停。
+SetStoryboardSpeedRadio	改变整个故事板的SpeedRatio属性值。
+SkipStoryboardToFill	讲故事板移到时间线的终点。
+RemoveStoryboard	移除故事板，停止所有在运行的动画并将属性返回原来的、最后一次设置的值。-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="http://pic28.photophoto.cn/20130805/0034034811466737_b.jpg" Stretch="UniformToFill"></Image>
+        <Image Source="http://img.pconline.com.cn/images/upload/upc/tx/itbbs/1608/11/c3/25402170_1470872089662_mthumb.jpg" Name="imgDay" Stretch="UniformToFill"></Image>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Height="60">
+            <Button Name="cmdStart" Height="20" Width="50">Start</Button>
+            <Button Name="cmdPause" Height="20" Width="50">Pause</Button>
+            <Button Name="cmdResume" Height="20" Width="50">Resume</Button>
+            <Button Name="cmdStop" Height="20" Width="50">Stop</Button>
+            <Button Name="cmdMiddle" Height="20" Width="110">Move To Middle</Button>
+        </StackPanel>
+    </Grid>
+</Window>
