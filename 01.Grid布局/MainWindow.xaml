@@ -9,8 +9,8 @@
         Height="450"
         mc:Ignorable="d">
     <Grid>
+        <!--  三行三列布局  -->
         <Grid.RowDefinitions>
-            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -20,73 +20,13 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Label HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
+        <!--  每一个格子放一个数字  -->
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
                Content="1"
                FontSize="20"
                Foreground="Red" />
-        <Label Grid.Column="1"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="2"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Column="2"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="3"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="1"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="4"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="1"
-               Grid.Column="1"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="5"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="1"
-               Grid.Column="2"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="6"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="2"
-               Grid.Column="0"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="7"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="2"
-               Grid.Column="1"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="8"
-               FontSize="20"
-               Foreground="Red" />
-        <Label Grid.Row="2"
-               Grid.Column="2"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Content="9"
-               FontSize="20"
-               Foreground="Red" />
-        <Border Grid.Row="3"
-                Grid.ColumnSpan="3"
-                Background="AntiqueWhite">
-            <Label HorizontalContentAlignment="Center"
-                   VerticalContentAlignment="Center"
-                   Content="10"
-                   FontSize="30"
-                   FontWeight="Bold"
-                   Foreground="Red" />
-        </Border>
     </Grid>
 </Window>

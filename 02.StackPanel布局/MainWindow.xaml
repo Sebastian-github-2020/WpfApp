@@ -2,18 +2,34 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02.StackPanel布局"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel Orientation="Horizontal" >
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <StackPanel Orientation="Vertical">
         <Border Background="AntiqueWhite">
-            <Label Content="lable" Background="Red" FontSize="30" FontWeight="ExtraBold" Width="100" Height="50"/>
+            <Label Width="100"
+                   Height="50"
+                   Background="Red"
+                   Content="lable"
+                   FontSize="30"
+                   FontWeight="ExtraBold" />
         </Border>
         <Border Background="Red">
-            <Label Content="lable" FontSize="30" Background="Yellow" FontWeight="ExtraBold"/>
+            <Label Background="Yellow"
+                   Content="lable"
+                   FontSize="30"
+                   FontWeight="ExtraBold" />
         </Border>
-        <Label Content="lable" FontSize="30" FontWeight="ExtraBold"/>
-        <Label Content="lable" FontSize="30" FontWeight="ExtraBold"/>
+        <Label Background="AntiqueWhite"
+               Content="lable"
+               FontSize="30"
+               FontWeight="ExtraBold" />
+        <Label Background="Bisque"
+               Content="lable"
+               FontSize="30"
+               FontWeight="ExtraBold" />
     </StackPanel>
 </Window>
