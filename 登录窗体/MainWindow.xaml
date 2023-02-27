@@ -10,6 +10,6 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
-        <Image Source="./Images/dog.jpg" Stretch="UniformToFill" />
+        <Image Source="./Images/dog.jpg" Width="200" />
     </Grid>
 </Window>

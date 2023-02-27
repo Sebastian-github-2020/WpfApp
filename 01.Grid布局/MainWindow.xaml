@@ -28,5 +28,46 @@
                Content="1"
                FontSize="20"
                Foreground="Red" />
+
+        <Rectangle x:Name="rect" Fill="BlanchedAlmond" Grid.Column="1"/>
+        <Rectangle x:Name="rect1" Grid.Column="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Red"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rect2" Grid.Column="0" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <LinearGradientBrush.StartPoint>
+                        <Point X="1" Y="0"/>
+                    </LinearGradientBrush.StartPoint>
+                    <LinearGradientBrush.EndPoint>
+                        <Point X="0.5" Y="1"/>
+                    </LinearGradientBrush.EndPoint>
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Offset="0.1" Color="Red"/>
+                            <GradientStop Offset="0.5" Color="Yellow"/>
+                            <GradientStop Offset="1.0" Color="Blue"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Column="1" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0.1" Color="LightBlue"/>
+                        <GradientStop Offset="0.3" Color="Blue"/>
+                        <GradientStop Offset="0.5" Color="DarkBlue"/>
+                        <GradientStop Offset="0.7" Color="LightCoral"/>
+                        <GradientStop Offset="0.9" Color="Coral"/>
+                        <GradientStop Offset="1.0" Color="DarkCyan"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>

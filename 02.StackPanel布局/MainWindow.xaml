@@ -28,8 +28,16 @@
                FontSize="30"
                FontWeight="ExtraBold" />
         <Label Background="Bisque"
-               Content="lable"
+               Content="{Binding ElementName=textb,Path=Text,Mode=OneWay}"
                FontSize="30"
                FontWeight="ExtraBold" />
+        <TextBox Text="???" x:Name="textb" TextAlignment="Center" FontSize="20"/>
+        <Button x:Name="btn" Content="按钮" Click="btn_Click"/>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>block：</TextBlock>
+                <TextBox Width="100"/>
+            </StackPanel>
+        </Button>
     </StackPanel>
 </Window>

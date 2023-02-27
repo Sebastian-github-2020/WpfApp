@@ -13,18 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _02.StackPanel布局 {
+namespace _30.framework版本demo {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-        }
-
-        private void btn_Click(object sender, RoutedEventArgs e) {
-            //通过x:name来访问到对应的控件
-            this.textb.Foreground = new SolidColorBrush(Colors.Green);
         }
     }
 }
