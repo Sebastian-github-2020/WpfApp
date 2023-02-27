@@ -90,7 +90,12 @@
     </Window.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Button Content="button1" Style="{DynamicResource ButtonStyle1}" />
+            <Button Style="{DynamicResource ButtonStyle1}">
+                <StackPanel>
+                    <Label>嘿嘿</Label>
+                    <Label>嘿嘿</Label>
+                </StackPanel>
+            </Button>
             <Button Content="button2" />
             <Button Content="button3" />
         </StackPanel>

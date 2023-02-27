@@ -23,7 +23,10 @@
     <Grid>
         <StackPanel>
             <Button Content="按钮1" Style="{StaticResource mybtn}" />
-            <Button Background="Yellow" Content="按钮2" />
+            <!--  使用了外部样式文件 buttonStyle.xaml 在app。xaml里面合并的  -->
+            <Button Background="Yellow"
+                    Content="按钮2红藕色"
+                    Style="{StaticResource baseButton1}" />
             <Button Background="Blue" Content="按钮3" />
         </StackPanel>
     </Grid>
