@@ -10,7 +10,9 @@
         mc:Ignorable="d">
     <Grid>
         <UniformGrid Columns="3" Rows="3">
-            <Border Background="Red" />
+            <Border Background="Red" >
+                <Button Width="100" Height="30">按钮1</Button>
+            </Border>
             <Border Background="Yellow" />
             <Border Background="Blue" />
             <Border Background="Blue" />

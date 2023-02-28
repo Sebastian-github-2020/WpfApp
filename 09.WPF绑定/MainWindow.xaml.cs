@@ -22,9 +22,12 @@ namespace _09.WPF绑定 {
             InitializeComponent();
             // 绑定数据到上下文 xaml中可以 绑定这个属性
             this.DataContext = new Person() {
-            Name = "张三"
+                Name = "张三"
             };
+
+
         }
+
     }
     class Person {
         public string? Name { get; set; }

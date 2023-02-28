@@ -19,7 +19,7 @@
             <TextBox
                 Height="30"
                 Margin="10,0"
-                Text="{Binding ElementName=slider, Path=Value}" />
+                Text="{Binding ElementName=slider, Path=Value,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" />
             <TextBox
                 Height="30"
                 Margin="10,0"

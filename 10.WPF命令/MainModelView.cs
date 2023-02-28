@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace _10.WPF命令 {
-    internal class MainModelView:ViewModelBase {
+    internal class MainModelView : ViewModelBase {
         public MyCommand CommandShow { get; set; }
         private string? name;
 
@@ -16,6 +16,7 @@ namespace _10.WPF命令 {
             set {
                 name = value;
                 OnPropertyChanged();
+                // ViewBaseModel里面的PropertyChanged
                 //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("name"));
             }
         }
@@ -32,7 +33,7 @@ namespace _10.WPF命令 {
         public void Show() {
             // 这里直接修改 ，不会显示到界面上，因为没有同步更新，
             // 为了同步更新 需要实现INotifyPropertyChanged 接口
-            Name = "哈哈哈"; 
+            Name = "哈哈哈";
             MessageBox.Show("点击按钮");
         }
     }

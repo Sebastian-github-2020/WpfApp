@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -16,7 +17,8 @@ namespace _10.WPF命令 {
         /// 在属性set 里面 调用这个方法
         /// </summary>
         /// <param name="propertyName">属性名</param>
-        public void OnPropertyChanged([CallerMemberName]string propertyName="") {  // CallerMemberName使用这个语法糖 可以不用手动传入参数了
+        public void OnPropertyChanged([CallerMemberName] string propertyName = "") {  // CallerMemberName使用这个语法糖 可以不用手动传入参数了
+            Debug.WriteLine(propertyName);
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

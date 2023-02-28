@@ -13,13 +13,15 @@
                 <LinearGradientBrush>
                     <GradientStop Color="White" Offset="0"/>
                     <GradientStop Color="Green" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Foreground>
             <Button.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="Red" Offset="0"/>
-                    <GradientStop Color="Teal" Offset="0.5"/>
-                    <GradientStop Color="Yellow" Offset="1"/>
+                    <GradientStop Color="Teal" Offset="0.3"/>
+                    <GradientStop Color="Yellow" Offset="0.7"/>
+                    <GradientStop Color="blue" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
             点击按钮
