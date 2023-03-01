@@ -19,22 +19,30 @@
                        Text="搜索条件:" />
             <TextBox Width="200"
                      Height="25"
+                     x:Name="keywords"
+                     Text="123"                   
+                    VerticalContentAlignment="Center"
                      Margin="10,0,0,0" />
             <Button Width="70"
                     Height="25"
                     Margin="10,0,0,0"
+                    x:Name="search"
+                    Click="search_Click"
                     Content="搜索" />
             <Button Width="70"
                     Height="25"
                     Margin="10,0,0,0"
-                    Content="重置" />
+                    x:Name="reset"
+                    Content="重置" Click="reset_Click"/>
             <Button Width="70"
                     Height="25"
                     Margin="10,0,0,0"
-                    Content="新增" />
+                    Content="新增" x:Name="add" Click="add_Click" />
         </StackPanel>
         <DataGrid Grid.Row="1"
-                  AutoGenerateColumns="False"
+                  x:Name="dataGrid"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False"                  
                   ItemsSource="{Binding List}">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="30"

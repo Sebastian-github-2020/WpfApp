@@ -1,0 +1,54 @@
+﻿<Window x:Class="_32.控件DataGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_32.控件DataGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--AutoGenerateColumns是否要自动展开一列，IsReadOnly是否可以添加数据-->
+        <DataGrid IsReadOnly="False" AutoGenerateColumns="False" ItemsSource="{Binding List}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="序号" Width="60" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="姓名" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="邮件地址" Width="*" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="手机号" Width="*" Binding="{Binding Phone}"/>
+                <!--自定义列内容-->
+                <DataGridTemplateColumn Header="操作" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Background="White" Foreground="#165dff">修改</Button>
+                                <Button Background="White" Foreground="Red">删除</Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+            <!--自定义内联行 点击cell会展开-->
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border Background="Wheat" Padding="10">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Email: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Email}" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Phone: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Phone}" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="12" Text="Sales Person: " VerticalAlignment="Center" />
+                                <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Name}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+    </Grid>
+</Window>
