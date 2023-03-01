@@ -8,10 +8,9 @@
         Width="800"
         Height="450"
         mc:Ignorable="d">
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Horizontal">
         <Border Background="AntiqueWhite">
-            <Label Width="100"
-                   Height="50"
+            <Label Height="50"
                    Background="Red"
                    Content="lable"
                    FontSize="30"
@@ -28,15 +27,20 @@
                FontSize="30"
                FontWeight="ExtraBold" />
         <Label Background="Bisque"
-               Content="{Binding ElementName=textb,Path=Text,Mode=OneWay}"
+               Content="{Binding ElementName=textb, Path=Text, Mode=OneWay}"
                FontSize="30"
                FontWeight="ExtraBold" />
-        <TextBox Text="???" x:Name="textb" TextAlignment="Center" FontSize="20"/>
-        <Button x:Name="btn" Content="按钮" Click="btn_Click"/>
+        <TextBox x:Name="textb"
+                 FontSize="20"
+                 Text="???"
+                 TextAlignment="Center" />
+        <Button x:Name="btn"
+                Click="btn_Click"
+                Content="按钮" />
         <Button>
             <StackPanel Orientation="Horizontal">
                 <TextBlock>block：</TextBlock>
-                <TextBox Width="100"/>
+                <TextBox Width="100" />
             </StackPanel>
         </Button>
     </StackPanel>
