@@ -290,14 +290,14 @@
                             Height="25"
                             Margin="0,0,15,5"
                             HorizontalAlignment="Right"
-                            VerticalAlignment="Bottom"
+                            VerticalAlignment="Center"
                             Background="White"
                             BorderBrush="#A4ADB2"
                             BorderThickness="1"
                             CornerRadius="15">
                             <TextBlock
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Bottom"
+                                VerticalAlignment="Center"
                                 FontWeight="Light"
                                 Text="DAY" />
                         </Border>
@@ -313,7 +313,7 @@
                             CornerRadius="15">
                             <TextBlock
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Bottom"
+                                VerticalAlignment="Center"
                                 FontWeight="Light"
                                 Text="MONTH" />
                         </Border>
@@ -329,10 +329,238 @@
                             CornerRadius="15">
                             <TextBlock
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Bottom"
+                                VerticalAlignment="Center"
                                 FontWeight="Light"
                                 Text="YEAR" />
                         </Border>
+                    </StackPanel>
+                    <!--  第二行  -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <Grid Margin="0,0,20,0">
+                            <Border
+                                Width="200"
+                                Height="136"
+                                Background="#ff6f00">
+                                <Border.Effect>
+                                    <DropShadowEffect
+                                        BlurRadius="20"
+                                        Direction="270"
+                                        Opacity="0.6"
+                                        ShadowDepth="15"
+                                        Color="#ff6f00" />
+                                </Border.Effect>
+                            </Border>
+                            <Border
+                                Width="225"
+                                Height="136"
+                                Panel.ZIndex="1"
+                                Background="#ff6f00"
+                                CornerRadius="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <!--  分割线  -->
+                                    <Border
+                                        Grid.RowSpan="2"
+                                        Height="1"
+                                        Background="White" />
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Border
+                                            Width="30"
+                                            Height="30"
+                                            Margin="15,0,15,0"
+                                            Background="#ff913c"
+                                            CornerRadius="15">
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Fonts/#iconfont"
+                                                Foreground="White"
+                                                Text="&#xe654;" />
+                                        </Border>
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            VerticalAlignment="Center"
+                                            FontSize="12"
+                                            FontWeight="Light"
+                                            Foreground="White"
+                                            Text="Start sending at" />
+                                    </Grid>
+                                    <StackPanel
+                                        Grid.Row="1"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Orientation="Vertical">
+                                        <TextBlock
+                                            FontSize="20"
+                                            FontWeight="Bold"
+                                            Foreground="White"
+                                            Text="December 05th'19" />
+                                        <TextBlock
+                                            FontSize="12"
+                                            FontWeight="Normal"
+                                            Foreground="White"
+                                            Text="11:14:08 am UTC -8:00" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <Grid Margin="0,0,20,0">
+                            <Border
+                                Width="200"
+                                Height="136"
+                                Background="#ffc000">
+                                <Border.Effect>
+                                    <DropShadowEffect
+                                        BlurRadius="20"
+                                        Direction="270"
+                                        Opacity="0.6"
+                                        ShadowDepth="15"
+                                        Color="#ffc000" />
+                                </Border.Effect>
+                            </Border>
+                            <Border
+                                Width="225"
+                                Height="136"
+                                Panel.ZIndex="1"
+                                Background="#ffc000"
+                                CornerRadius="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <!--  分割线  -->
+                                    <Border
+                                        Grid.RowSpan="2"
+                                        Height="1"
+                                        Background="White" />
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Border
+                                            Width="30"
+                                            Height="30"
+                                            Margin="15,0,15,0"
+                                            Background="#ffcf3c"
+                                            CornerRadius="15">
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Fonts/#iconfont"
+                                                Foreground="White"
+                                                Text="&#xe654;" />
+                                        </Border>
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            VerticalAlignment="Center"
+                                            FontSize="12"
+                                            FontWeight="Light"
+                                            Foreground="White"
+                                            Text="Start sending at" />
+                                    </Grid>
+                                    <StackPanel
+                                        Grid.Row="1"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Orientation="Vertical">
+                                        <TextBlock
+                                            FontSize="20"
+                                            FontWeight="Bold"
+                                            Foreground="White"
+                                            Text="December 05th'19" />
+                                        <TextBlock
+                                            FontSize="12"
+                                            FontWeight="Normal"
+                                            Foreground="White"
+                                            Text="11:14:08 am UTC -8:00" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <Grid Margin="0,0,20,0">
+                            <Border
+                                Width="200"
+                                Height="136"
+                                Background="#5ae5b3">
+                                <Border.Effect>
+                                    <DropShadowEffect
+                                        BlurRadius="20"
+                                        Direction="270"
+                                        Opacity="0.6"
+                                        ShadowDepth="15"
+                                        Color="#5ae5b3" />
+                                </Border.Effect>
+                            </Border>
+                            <Border
+                                Width="225"
+                                Height="136"
+                                Panel.ZIndex="1"
+                                Background="#5ae5b3"
+                                CornerRadius="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <!--  分割线  -->
+                                    <Border
+                                        Grid.RowSpan="2"
+                                        Height="1"
+                                        Background="White" />
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Border
+                                            Width="30"
+                                            Height="30"
+                                            Margin="15,0,15,0"
+                                            Background="#81ebc5"
+                                            CornerRadius="15">
+                                            <TextBlock
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Fonts/#iconfont"
+                                                Foreground="White"
+                                                Text="&#xe654;" />
+                                        </Border>
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            VerticalAlignment="Center"
+                                            FontSize="12"
+                                            FontWeight="Light"
+                                            Foreground="White"
+                                            Text="Start sending at" />
+                                    </Grid>
+                                    <StackPanel
+                                        Grid.Row="1"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Orientation="Vertical">
+                                        <TextBlock
+                                            FontSize="20"
+                                            FontWeight="Bold"
+                                            Foreground="White"
+                                            Text="December 05th'19" />
+                                        <TextBlock
+                                            FontSize="12"
+                                            FontWeight="Normal"
+                                            Foreground="White"
+                                            Text="11:14:08 am UTC -8:00" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Grid>
                     </StackPanel>
                 </Grid>
             </Border>
@@ -346,7 +574,7 @@
                 <!--  第一行  -->
                 <TextBlock
                     Margin="20,0,0,0"
-                    VerticalAlignment="Bottom"
+                    VerticalAlignment="Center"
                     FontSize="30"
                     Foreground="#566872"
                     Text="Chat" />
