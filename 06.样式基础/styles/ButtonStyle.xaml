@@ -2,5 +2,7 @@
     <Style x:Key="baseButton1" TargetType="Button">
         <Setter Property="Foreground" Value="Red" />
         <Setter Property="FontSize" Value="30" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="FontSize" Value="16" />
     </Style>
 </ResourceDictionary>

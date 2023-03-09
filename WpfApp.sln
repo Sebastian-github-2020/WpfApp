@@ -71,9 +71,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32.控件DataGrid", "32.控
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33.布局作业", "33.布局作业\33.布局作业.csproj", "{3D376726-2164-4520-B8C5-58A534248F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34.界面中切换不同的page", "34.界面中切换不同的page\34.界面中切换不同的page.csproj", "{4ABD781D-84C2-4E09-99E5-9901E1F0BC27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "34.界面中切换不同的page", "34.界面中切换不同的page\34.界面中切换不同的page.csproj", "{4ABD781D-84C2-4E09-99E5-9901E1F0BC27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "测试", "测试\测试.csproj", "{8D3B62A4-C153-4A8C-8914-B839B5422A51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "测试", "测试\测试.csproj", "{8D3B62A4-C153-4A8C-8914-B839B5422A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.仿网易云音乐", "35.仿网易云音乐\35.仿网易云音乐.csproj", "{957947D3-5320-459F-935C-FAD21719E75F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36.轮播器", "36.轮播器\36.轮播器.csproj", "{5DFE47A2-3B35-4E81-ABAA-D4690024809B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -371,6 +375,22 @@ Global
 		{8D3B62A4-C153-4A8C-8914-B839B5422A51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D3B62A4-C153-4A8C-8914-B839B5422A51}.Release|x86.ActiveCfg = Release|Any CPU
 		{8D3B62A4-C153-4A8C-8914-B839B5422A51}.Release|x86.Build.0 = Release|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Debug|x86.Build.0 = Debug|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Release|x86.ActiveCfg = Release|Any CPU
+		{957947D3-5320-459F-935C-FAD21719E75F}.Release|x86.Build.0 = Release|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Debug|x86.Build.0 = Debug|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|x86.ActiveCfg = Release|Any CPU
+		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
