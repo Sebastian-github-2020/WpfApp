@@ -40,7 +40,6 @@
             <!--  使用了外部样式文件 buttonStyle.xaml 在app。xaml里面合并的  -->
             <Button
                 Width="200"
-                Background="Yellow"
                 Content="全局样式文件"
                 Style="{StaticResource baseButton1}" />
             <Button

@@ -86,11 +86,12 @@
     </Window.Resources>
     <UniformGrid Columns="3" Rows="3">
         <Button
-            Width="200"
+            Width="130"
             Height="30"
             VerticalContentAlignment="Center"
             Background="White"
             BorderBrush="#FF707070"
+            
             BorderThickness="1"
             Content="圆角按钮"
             Foreground="#000000"
