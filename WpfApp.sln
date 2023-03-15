@@ -79,6 +79,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.仿网易云音乐", "35
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36.轮播器", "36.轮播器\36.轮播器.csproj", "{5DFE47A2-3B35-4E81-ABAA-D4690024809B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37.触发器", "37.触发器\37.触发器.csproj", "{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38.依赖项属性", "38.依赖项属性\38.依赖项属性.csproj", "{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -391,6 +395,22 @@ Global
 		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|x86.ActiveCfg = Release|Any CPU
 		{5DFE47A2-3B35-4E81-ABAA-D4690024809B}.Release|x86.Build.0 = Release|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C88AA8A-FEF5-413E-8EB0-5DDA19EE59B0}.Release|x86.Build.0 = Release|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Debug|x86.Build.0 = Debug|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|x86.ActiveCfg = Release|Any CPU
+		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

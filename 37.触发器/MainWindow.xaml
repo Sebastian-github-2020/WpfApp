@@ -1,0 +1,75 @@
+﻿<Window
+    x:Class="_37.触发器.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_37.触发器"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <!--  简单触发器 用在style里面  这种触发器并不能满足所有的需求，如按钮的选中颜色 就受到controlTemplate影响，需要在控件模板中使用触发器改变  -->
+        <Style x:Key="btn" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red" />
+                    <Setter Property="FontSize" Value="20" />
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+        <!--  多条件触发器  -->
+        <Style x:Key="txt" TargetType="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="10,0,10,0" />
+            <Style.Triggers>
+                <!--  多条件触发器  -->
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True" />
+                        <Condition Property="IsFocused" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Foreground" Value="Red" />
+                        <Setter Property="FontSize" Value="20" />
+                        <Setter Property="Height" Value="30" />
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <!--  事件触发器  -->
+        <Style x:Key="txtb" TargetType="TextBox">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="TextChanged">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetProperty="FontSize"
+                                    To="22"
+                                    Duration="0:0:2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <UniformGrid Columns="3" Rows="3">
+        <Button Content="默认按钮" />
+        <Button Content="悬浮改变颜色"   Style="{StaticResource btn}" />
+        <TextBox
+            Width="200"
+            Style="{StaticResource txt}"
+            Text="多条件触发器" />
+        <TextBox Style="{StaticResource txtb}" Text="事件触发器123" />
+    </UniformGrid>
+</Window>
