@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37.触发器", "37.触发�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38.依赖项属性", "38.依赖项属性\38.依赖项属性.csproj", "{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "39.路由事件", "39.路由事件\39.路由事件.csproj", "{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -411,6 +413,14 @@ Global
 		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|x86.ActiveCfg = Release|Any CPU
 		{364990D5-6F94-4F74-A0AB-7A0CF5A0DF73}.Release|x86.Build.0 = Release|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Debug|x86.Build.0 = Debug|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A1CE88B-6FBC-439C-9AF9-234C9055EEFB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
