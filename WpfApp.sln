@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "40.资源", "40.资源\40.�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "41.形状，画刷，变换", "41.形状，画刷，变换\41.形状，画刷，变换.csproj", "{702C6BC9-58CA-44A7-901F-C41EE083DD5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "42.定时关机", "42.定时关机\42.定时关机.csproj", "{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -441,6 +443,14 @@ Global
 		{702C6BC9-58CA-44A7-901F-C41EE083DD5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{702C6BC9-58CA-44A7-901F-C41EE083DD5F}.Release|x86.ActiveCfg = Release|Any CPU
 		{702C6BC9-58CA-44A7-901F-C41EE083DD5F}.Release|x86.Build.0 = Release|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Debug|x86.Build.0 = Debug|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Release|x86.ActiveCfg = Release|Any CPU
+		{0507ACFE-B56B-496C-B8E9-DC5F76F15B7D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,6 +18,7 @@ namespace _09.WPF绑定 {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+
         public MainWindow() {
             InitializeComponent();
             // 绑定数据到上下文 xaml中可以 绑定这个属性

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,22 @@ namespace _41.形状_画刷_变换 {
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window {
+        public string MyTitle { get; set; }
+        public PointCollection Points { get; set; }
         public MainWindow() {
             InitializeComponent();
+            //PointCollection ps = new PointCollection();
+            Points = new PointCollection();
+            Points.Add(new Point(0, 10));
+            Points.Add(new Point(10, 0));
+            Points.Add(new Point(20, 30));
+            MyTitle = "zaks";
+            Debug.WriteLine(MyTitle);
+            this.DataContext = new {
+                Points = Points,
+                MyTitle = MyTitle
+            };
         }
+
     }
 }
