@@ -20,7 +20,7 @@
             x:Name="showTime"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Content="剩余时间" />
+            Content="注意保存好资料" />
         <StackPanel
             Grid.Row="1"
             Margin="10,0,0,10"

@@ -35,9 +35,9 @@ namespace _42.定时关机 {
         public MainWindow() {
             InitializeComponent();
             Flag = WindowOperat.NOOPERATE;
-            this.Timer = new DispatcherTimer();
-            this.Timer.Interval = TimeSpan.FromSeconds(1); // 设置工作间隔1秒
-            this.Timer.Tick += timer_Tick;
+            //this.Timer = new DispatcherTimer();
+            //this.Timer.Interval = TimeSpan.FromSeconds(1); // 设置工作间隔1秒
+            //this.Timer.Tick += timer_Tick;
         }
         /// <summary>
         /// 选择radiobutton
@@ -85,9 +85,28 @@ namespace _42.定时关机 {
                 return;
             }
 
-            // 开启定时器
-            this.Timer.Start();
-            this.showTime.Content = $"剩余时间{this.TotalSeconds.ToString()}秒";
+            switch(this.Flag) {
+                case WindowOperat.SHUTDOWN:
+                    Debug.WriteLine("关机");
+                    System.Diagnostics.Process.Start("shutdown.exe", $"-s -t {this.TotalSeconds}");
+                    break;
+                case WindowOperat.LOGOUT:
+                    Debug.WriteLine("注销");
+                    System.Diagnostics.Process.Start("shutdown.exe", $"-r -t {this.TotalSeconds}");
+                    break;
+                case WindowOperat.REBOOT:
+                    Debug.WriteLine("重启");
+                    System.Diagnostics.Process.Start("shutdown.exe", $"-l -t {this.TotalSeconds}");
+                    break;
+                case WindowOperat.NOOPERATE:
+                    break;
+                default:
+                    break;
+            }
+
+            //// 开启定时器
+            //this.Timer.Start();
+            //this.showTime.Content = $"剩余时间{this.TotalSeconds.ToString()}秒";
         }
 
         /// <summary>
