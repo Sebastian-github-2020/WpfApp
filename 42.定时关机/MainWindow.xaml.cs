@@ -104,13 +104,16 @@ namespace _42.定时关机 {
                 // 执行操作
                 switch(this.Flag) {
                     case WindowOperat.SHUTDOWN:
-                        System.Diagnostics.Process.Start("shutdown", "s");
+                        Debug.WriteLine("关机");
+                        System.Diagnostics.Process.Start("shutdown.exe", "-s -t 0");
                         break;
                     case WindowOperat.LOGOUT:
-                        System.Diagnostics.Process.Start("shutdown", "r");
+                        Debug.WriteLine("注销");
+                        System.Diagnostics.Process.Start("shutdown.exe", "-r -t 0");
                         break;
                     case WindowOperat.REBOOT:
-                        System.Diagnostics.Process.Start("shutdown", "l");
+                        Debug.WriteLine("重启");
+                        System.Diagnostics.Process.Start("shutdown.exe", "-l -t 0");
                         break;
                     case WindowOperat.NOOPERATE:
                         break;
