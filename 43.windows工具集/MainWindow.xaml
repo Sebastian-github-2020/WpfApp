@@ -15,10 +15,12 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <!--  左侧菜单  -->
+        <!--  指定绑定数据  -->
         <ListBox ItemsSource="{Binding Menu}" Style="{StaticResource menu}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10" Orientation="Horizontal">
+                        <!--  当没有名称，直接是数据的情况下 用.代替  -->
                         <TextBlock Text="{Binding .}" />
                     </StackPanel>
                 </DataTemplate>

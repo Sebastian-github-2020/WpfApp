@@ -11,6 +11,13 @@ namespace _43.windows工具集.ViewModels {
         /// 菜单栏
         /// </summary>
         public List<string> Menu { get; set; }
+        private int myVar;
+
+        public int MyProperty {
+            get { return myVar; }
+            set { myVar = value; OnPropertyChanged(); }
+        }
+
 
         public ToolsViewModel() {
             this.Menu = new List<string>() {
