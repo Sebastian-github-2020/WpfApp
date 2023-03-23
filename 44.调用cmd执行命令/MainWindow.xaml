@@ -16,22 +16,49 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <Button
-            x:Name="OpenCmd"
-            Width="100"
-            Height="25"
-            Click="OpenCmd_Click"
-            Content="查看ip" />
+                x:Name="OpenCmd"
+                Width="100"
+                Height="25"
+                Command="{Binding CmdCommand}"
+                CommandParameter="ipconfig"
+                Content="查看ip" />
             <Button
-            x:Name="FlushDns"
-            Width="100"
-            Height="25"
-            Click="FlushDns_Click"
-            Content="刷新dns" />
+                x:Name="FlushDns"
+                Width="100"
+                Height="25"
+                Command="{Binding CmdCommand}"
+                CommandParameter="ipconfig/flushdns"
+                Content="刷新dns" />
         </StackPanel>
 
-        <RichTextBox
+        <!--<RichTextBox
             x:Name="txt"
             Grid.Row="1"
-            Background="AliceBlue" />
+            AllowDrop="False"
+            Background="AliceBlue">
+            <FlowDocument>
+
+                <List>
+                    <ListItem>
+                        <Paragraph >
+        -->
+        <!--<Run Text="{Binding RichTextString}" />-->
+        <!--
+                            <Run Text="{Binding Texts}" />
+                        </Paragraph>
+                    </ListItem>
+                </List>
+
+            </FlowDocument>
+        </RichTextBox>-->
+        <TextBox
+            x:Name="txt"
+            Grid.Row="1"
+            AllowDrop="False"
+            HorizontalScrollBarVisibility="Auto"
+            IsReadOnly="True"
+            Text="{Binding RichTextString}"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto" />
     </Grid>
 </Window>

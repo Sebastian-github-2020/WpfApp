@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _44.调用cmd执行命令.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,8 +23,12 @@ namespace _44.调用cmd执行命令 {
         public System.Diagnostics.Process Process { get; set; }
         public MainWindow() {
             InitializeComponent();
-            this.Process = new System.Diagnostics.Process();
-            this.Config_Process();
+            //this.Process = new System.Diagnostics.Process();
+            //this.Config_Process();
+
+
+            //使用mvvm模式
+            this.DataContext = new MainViewModel();
         }
 
         /// <summary>
@@ -50,7 +55,7 @@ namespace _44.调用cmd执行命令 {
 
         private void Custom_Cmd(string fileName, string command) {
             //执行前先清空富文本内容
-            this.txt.Document.Blocks.Clear();
+            //this.txt.Document.Blocks.Clear();
             this.Process.StartInfo.FileName = fileName;// 指定打开的应用程序
             this.Process.Start();// 启动执行
             this.Process.StandardInput.WriteLine(command + "&exit");
@@ -71,7 +76,7 @@ namespace _44.调用cmd执行命令 {
                     Run r = new Run(readString);
                     Paragraph paragraph = new Paragraph();
                     paragraph.Inlines.Add(r);
-                    this.txt.Document.Blocks.Add(paragraph);
+                    // this.txt.Document.Blocks.Add(paragraph);
                 }
 
 
