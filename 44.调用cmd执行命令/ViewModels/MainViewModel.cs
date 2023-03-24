@@ -61,7 +61,7 @@ namespace _44.调用cmd执行命令.ViewModels {
             this.MyProcess.Start();
             // 2. 执行命令
             this.MyProcess.StandardInput.WriteLine(command + "&exit");
-            this.MyProcess.StandardInput.AutoFlush = true;
+            this.MyProcess.StandardInput.AutoFlush = true; // 刷新缓存区
             // 3. 读取返回的内容
             // 3.1 因为cmd返回的内容前面几行是不必要的 所有要剔除掉，因此选择一行一行的读取,
             StringBuilder sb = new StringBuilder();
