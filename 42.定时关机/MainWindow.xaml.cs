@@ -16,8 +16,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace _42.定时关机 {
-    public enum WindowOperat {
+namespace _42.定时关机
+{
+    public enum WindowOperat
+    {
         SHUTDOWN,//关机
         LOGOUT,//注销
         REBOOT,//重启
@@ -26,7 +28,8 @@ namespace _42.定时关机 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window {
+    public partial class MainWindow : Window
+    {
         public WindowOperat Flag { get; set; }
         //定时器
         private DispatcherTimer Timer { get; }
@@ -47,19 +50,20 @@ namespace _42.定时关机 {
         private void RadioButton_Click(object sender, RoutedEventArgs e) {
             RadioButton rb = (RadioButton)sender;
             Debug.WriteLine(rb.Name);
-            switch(rb.Name) {
+            switch(rb.Name)
+            {
                 case "shutdown":
-                    this.Flag = WindowOperat.SHUTDOWN;
-                    break;
+                this.Flag = WindowOperat.SHUTDOWN;
+                break;
                 case "logout":
-                    this.Flag = WindowOperat.LOGOUT;
-                    break;
+                this.Flag = WindowOperat.LOGOUT;
+                break;
                 case "reboot":
-                    this.Flag = WindowOperat.REBOOT;
-                    break;
+                this.Flag = WindowOperat.REBOOT;
+                break;
                 default:
-                    this.Flag = WindowOperat.NOOPERATE;
-                    break;
+                this.Flag = WindowOperat.NOOPERATE;
+                break;
 
             }
         }
@@ -70,7 +74,8 @@ namespace _42.定时关机 {
         /// <param name="e"></param>
         private void confirmBtn_Click(object sender, RoutedEventArgs e) {
             //判定是否选择了操作
-            if(this.Flag == WindowOperat.NOOPERATE) {
+            if(this.Flag == WindowOperat.NOOPERATE)
+            {
                 MessageBox.Show("请先选择一个操作");
                 return;
             }
@@ -80,7 +85,8 @@ namespace _42.定时关机 {
             int seconds = Convert.ToInt32(this.seconds.Text);
             // 总共秒数
             this.TotalSeconds = hour + minutes + seconds;
-            if(this.TotalSeconds <= 0) {
+            if(this.TotalSeconds <= 0)
+            {
                 MessageBox.Show("请输入正确的时间");
                 return;
             }
@@ -118,27 +124,35 @@ namespace _42.定时关机 {
             //lblTime.Content = DateTime.Now.ToString("HH:mm:ss.fff");
             this.TotalSeconds--;
             this.showTime.Content = $"剩余时间{this.TotalSeconds.ToString()}秒";
-            if(this.TotalSeconds <= 0) {
+            if(this.TotalSeconds <= 0)
+            {
                 this.Timer.Stop();
-                // 执行操作
-                switch(this.Flag) {
-                    case WindowOperat.SHUTDOWN:
-                        Debug.WriteLine("关机");
-                        System.Diagnostics.Process.Start("shutdown.exe", "-s -t 0");
+                try
+                {
+                    // 执行操作
+                    switch(this.Flag)
+                    {
+                        case WindowOperat.SHUTDOWN:
+                        System.Diagnostics.Process.Start("shutdown", "s");
                         break;
-                    case WindowOperat.LOGOUT:
-                        Debug.WriteLine("注销");
-                        System.Diagnostics.Process.Start("shutdown.exe", "-r -t 0");
+                        case WindowOperat.LOGOUT:
+                        System.Diagnostics.Process.Start("shutdown", "r");
                         break;
-                    case WindowOperat.REBOOT:
-                        Debug.WriteLine("重启");
-                        System.Diagnostics.Process.Start("shutdown.exe", "-l -t 0");
+                        case WindowOperat.REBOOT:
+                        System.Diagnostics.Process.Start("shutdown", "l");
                         break;
-                    case WindowOperat.NOOPERATE:
+                        case WindowOperat.NOOPERATE:
                         break;
-                    default:
+                        default:
                         break;
+                    }
                 }
+                catch(Exception a)
+                {
+
+                    Debug.WriteLine(a.Message);
+                }
+
             }
         }
     }
