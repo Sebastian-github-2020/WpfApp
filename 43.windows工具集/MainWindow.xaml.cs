@@ -1,6 +1,7 @@
 ﻿using _43.windows工具集.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,16 @@ namespace _43.windows工具集 {
         public MainWindow() {
             InitializeComponent();
             this.DataContext = new ToolsViewModel();
+        }
+        /// <summary>
+        /// 菜单切换
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuList_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            ListBox lb = (ListBox)sender;
+            Debug.WriteLine(sender.GetType().ToString());
+
         }
     }
 }

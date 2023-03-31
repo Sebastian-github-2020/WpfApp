@@ -20,6 +20,14 @@ namespace _45.获取windows网卡信息.ViewModels {
             }
         }
 
+        private string selectedNetAdapter;
+
+        public string SelectedNetAdapter {
+            get { return selectedNetAdapter; }
+            set { selectedNetAdapter = value; OnPropertyChanged(); }
+        }
+
+
 
 
 

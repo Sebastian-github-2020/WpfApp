@@ -7,8 +7,10 @@ using System.Windows.Input;
 
 namespace _43.windows工具集.ViewModels {
     public class MyCommand : ICommand {
-        public Action MyAction { get; set; }
-
+        // 无参的action
+        private Action MyAction { get; set; }
+        // 一个参数的action
+        private Action<string> MyAction1 { get; set; }
 
         /// <summary>
         /// 无参数的action
@@ -17,15 +19,26 @@ namespace _43.windows工具集.ViewModels {
         public MyCommand(Action action) {
             MyAction = action;
         }
+        /// <summary>
+        /// 一个参数的action
+        /// </summary>
+        /// <param name="action"></param>
+        public MyCommand(Action<string> action) {
+            MyAction1 = action;
+        }
 
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter) {
+
             return MyAction != null;
         }
 
         public void Execute(object parameter) {
-            MyAction();
+            if(this.CanExecuteChanged != null) {
+                MyAction();
+            }
+
         }
     }
 }
