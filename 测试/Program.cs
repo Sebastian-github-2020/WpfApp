@@ -39,7 +39,7 @@ Console.WriteLine(zaks.Name);
 
 
 class Person : ICloneable {
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     public object Clone() {
         return this.MemberwiseClone();

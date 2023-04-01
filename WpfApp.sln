@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "45.获取windows网卡信�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46.menu组件", "46.menu组件\46.menu组件.csproj", "{3DF685FC-6A07-4183-AA23-11E6FEB51805}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46.控件ListBox", "46.控件ListBox\46.控件ListBox.csproj", "{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -491,6 +493,14 @@ Global
 		{3DF685FC-6A07-4183-AA23-11E6FEB51805}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3DF685FC-6A07-4183-AA23-11E6FEB51805}.Release|x86.ActiveCfg = Release|Any CPU
 		{3DF685FC-6A07-4183-AA23-11E6FEB51805}.Release|x86.Build.0 = Release|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Debug|x86.Build.0 = Debug|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|x86.ActiveCfg = Release|Any CPU
+		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,5 +58,16 @@ namespace _45.获取windows网卡信息 {
             Debug.WriteLine($"最终m对象Nets长度{this.Vm.Nets.Count.ToString()}");
             this.Vm.Nets = tmpList;//因为对象是引用类型
         }
+        /// <summary>
+        /// 列表选择
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ll_Selected(object sender, RoutedEventArgs e) {
+            ListBox box = (ListBox)sender;
+            NetAdapterInfo infoItem = (NetAdapterInfo)box.SelectedItem;
+            Debug.WriteLine(infoItem.Name);
+            this.Vm.SelectedNetAdapter = infoItem.Name;
+        }
     }
 }
