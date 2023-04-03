@@ -14,13 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _48.plane {
+namespace _48.plane
+{
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window {
+    public partial class MainWindow : Window
+    {
         public MainWindow() {
             InitializeComponent();
+            this.DataContext = new
+            {
+                Title = "标题"
+            };
         }
         /// <summary>
         /// 切换tab
@@ -29,7 +35,6 @@ namespace _48.plane {
         /// <param name="e"></param>
         private void TabCon_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             TabControl tab = (TabControl)sender;
-
         }
     }
 }
