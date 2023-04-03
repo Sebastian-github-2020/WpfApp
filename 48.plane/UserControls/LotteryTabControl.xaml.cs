@@ -15,24 +15,18 @@ using System.Windows.Shapes;
 
 namespace _48.plane.UserControls {
     /// <summary>
-    /// TabControl.xaml 的交互逻辑
+    /// LotteryTabControl.xaml 的交互逻辑
     /// </summary>
-    public partial class TabControl : UserControl {
-
+    public partial class LotteryTabControl : UserControl {
 
         public string Title {
             get { return (string)GetValue(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
-
-        // Using a DependencyProperty as the backing store for Title.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty TitleProperty =
-            DependencyProperty.Register("Title", typeof(string), typeof(TabControl), new PropertyMetadata(""));
-
-
-        public TabControl() {
+        private static readonly DependencyProperty TitleProperty =
+            DependencyProperty.Register("Title", typeof(string), typeof(LotteryTabControl), new PropertyMetadata(null));
+        public LotteryTabControl() {
             InitializeComponent();
-            this.DataContext = this;
         }
     }
 }

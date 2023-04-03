@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,15 @@ namespace _48.plane {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+        /// <summary>
+        /// 切换tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TabCon_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            TabControl tab = (TabControl)sender;
+
         }
     }
 }

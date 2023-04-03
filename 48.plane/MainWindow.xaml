@@ -9,7 +9,7 @@
     Width="800"
     Height="450">
     <Grid>
-        <TabControl>
+        <TabControl x:Name="TabCon" SelectionChanged="TabCon_SelectionChanged">
             <TabItem Header="第一项">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -18,20 +18,15 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <!--  第一列历史数据  -->
-                    <UserC:TabControl Title="嘿嘿嘿" />
+                    <UserC:LotteryTabControl Title="嘿嘿嘿" />
+
                 </Grid>
             </TabItem>
-            <TabItem Header="第二项">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <!--  第一列历史数据  -->
-                    <TextBox />
-                </Grid>
-            </TabItem>
+            <!--<TabControl.ItemTemplate>
+                <DataTemplate>
+
+                </DataTemplate>
+            </TabControl.ItemTemplate>-->
         </TabControl>
 
     </Grid>
