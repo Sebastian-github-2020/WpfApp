@@ -1,13 +1,14 @@
-﻿<Window x:Class="_01.Grid布局.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:_01.Grid布局"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="MainWindow"
-        Width="800"
-        Height="450"
-        mc:Ignorable="d">
+﻿<Window
+    x:Class="_01.Grid布局.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_01.Grid布局"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
     <Grid>
         <!--  三行三列布局  -->
         <Grid.RowDefinitions>
@@ -21,53 +22,68 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <!--  每一个格子放一个数字  -->
-        <Label Grid.Row="0"
-               Grid.Column="0"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               Content="1"
-               FontSize="20"
-               Foreground="Red" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="1"
+            FontSize="20"
+            Foreground="Red" />
 
-        <Rectangle x:Name="rect" Fill="BlanchedAlmond" Grid.Column="1"/>
+        <Rectangle
+            x:Name="rect"
+            Grid.Column="1"
+            Fill="BlanchedAlmond" />
         <Rectangle x:Name="rect1" Grid.Column="2">
             <Rectangle.Fill>
-                <SolidColorBrush Color="Red"/>
+                <SolidColorBrush Color="Red" />
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="rect2" Grid.Column="0" Grid.Row="1">
+        <Rectangle
+            x:Name="rect2"
+            Grid.Row="1"
+            Grid.Column="0">
             <Rectangle.Fill>
                 <LinearGradientBrush>
                     <LinearGradientBrush.StartPoint>
-                        <Point X="1" Y="0"/>
+                        <Point X="1" Y="0" />
                     </LinearGradientBrush.StartPoint>
                     <LinearGradientBrush.EndPoint>
-                        <Point X="0.5" Y="1"/>
+                        <Point X="0.5" Y="1" />
                     </LinearGradientBrush.EndPoint>
                     <LinearGradientBrush.GradientStops>
                         <GradientStopCollection>
-                            <GradientStop Offset="0.1" Color="Red"/>
-                            <GradientStop Offset="0.5" Color="Yellow"/>
-                            <GradientStop Offset="1.0" Color="Blue"/>
+                            <GradientStop Offset="0.1" Color="Red" />
+                            <GradientStop Offset="0.5" Color="Yellow" />
+                            <GradientStop Offset="1.0" Color="Blue" />
                         </GradientStopCollection>
                     </LinearGradientBrush.GradientStops>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle Grid.Column="1" Grid.Row="1">
+        <Rectangle Grid.Row="1" Grid.Column="1">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
                     <LinearGradientBrush.GradientStops>
-                        <GradientStop Offset="0.1" Color="LightBlue"/>
-                        <GradientStop Offset="0.3" Color="Blue"/>
-                        <GradientStop Offset="0.5" Color="DarkBlue"/>
-                        <GradientStop Offset="0.7" Color="LightCoral"/>
-                        <GradientStop Offset="0.9" Color="Coral"/>
-                        <GradientStop Offset="1.0" Color="DarkCyan"/>
+                        <GradientStop Offset="0.1" Color="LightBlue" />
+                        <GradientStop Offset="0.3" Color="Blue" />
+                        <GradientStop Offset="0.5" Color="DarkBlue" />
+                        <GradientStop Offset="0.7" Color="LightCoral" />
+                        <GradientStop Offset="0.9" Color="Coral" />
+                        <GradientStop Offset="1.0" Color="DarkCyan" />
                     </LinearGradientBrush.GradientStops>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Label
+            Grid.Row="1"
+            Grid.Column="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="Black"
+            Content="填充"
+            Foreground="White" />
     </Grid>
 </Window>

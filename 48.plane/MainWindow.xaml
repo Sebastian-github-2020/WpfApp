@@ -1,0 +1,33 @@
+﻿<Window
+    x:Class="_48.plane.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UserC="clr-namespace:_48.plane.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_48.plane"
+    Title="MainWindow"
+    Width="800"
+    Height="450">
+    <Grid>
+        <TabControl x:Name="TabCon" SelectionChanged="TabCon_SelectionChanged">
+            <TabItem Header="第一项">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <!--  第一列历史数据  -->
+                    <UserC:LotteryTabControl Title="嘿嘿嘿" />
+
+                </Grid>
+            </TabItem>
+            <!--<TabControl.ItemTemplate>
+                <DataTemplate>
+
+                </DataTemplate>
+            </TabControl.ItemTemplate>-->
+        </TabControl>
+
+    </Grid>
+</Window>

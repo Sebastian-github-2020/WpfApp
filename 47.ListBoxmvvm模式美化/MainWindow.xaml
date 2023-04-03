@@ -1,34 +1,45 @@
-﻿<Window x:Class="_46.控件ListBox.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:_46.控件ListBox"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="MainWindow"
-        Width="800"
-        Height="450"
-        mc:Ignorable="d">
+﻿<Window
+    x:Class="_47.ListBoxmvvm模式美化.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_47.ListBoxmvvm模式美化"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="120" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="#3a3a3a" />
-        <ListBox Margin="0,50,0,0"
-                 Background="Transparent"
-                 BorderThickness="0"
-                 FontSize="16"
-                 Foreground="White">
-            <!--  美化item  -->
+        <!--  listbox  -->
+        <ListBox
+            Background="#3a3a3a"
+            BorderThickness="0"
+            Foreground="White"
+            ItemsSource="{Binding .}">
+            <!--  数据模板  -->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <!--  注意 这里面的内容都是包含在 listBoxItem 的content里面  -->
+                    <!--  数据模板只是设置显示的方式，并没有改变ContentPresenter控件  -->
+                    <TextBlock Text="{Binding .}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <!--  美化ListBoxItem  -->
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
+
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="ListBoxItem">
                                 <StackPanel
                                     x:Name="sp"
                                     Height="35"
-                                    Background="Red"
+                                    Background="Transparent"
                                     Orientation="Horizontal">
                                     <Rectangle
                                         x:Name="siderBar"
@@ -42,16 +53,14 @@
                                         <Setter TargetName="siderBar" Property="Visibility" Value="Visible" />
                                         <Setter TargetName="sp" Property="Background" Value="#1a1a1a" />
                                     </Trigger>
+
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
+
                 </Style>
             </ListBox.ItemContainerStyle>
-            <ListBoxItem Content="首页" />
-            <ListBoxItem Content="用户" />
-            <ListBoxItem Content="模块" />
-            <ListBoxItem Content="设置" />
 
         </ListBox>
     </Grid>
