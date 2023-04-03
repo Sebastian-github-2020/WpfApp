@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "45.获取windows网卡信�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46.控件ListBox", "46.控件ListBox\46.控件ListBox.csproj", "{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "47.ListBoxmvvm模式美化", "47.ListBoxmvvm模式美化\47.ListBoxmvvm模式美化.csproj", "{90396A45-545E-4E8A-BBBF-6A405CCB34D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -491,6 +493,14 @@ Global
 		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{330B8F0C-7BDF-46A0-9F54-3B660F9040BF}.Release|x86.Build.0 = Release|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{90396A45-545E-4E8A-BBBF-6A405CCB34D5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
