@@ -13,16 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _47.ListBoxmvvm模式美化 {
+namespace _47.ListBoxmvvm模式美化
+{
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window {
+    public partial class MainWindow : Window
+    {
         public MainWindow() {
             InitializeComponent();
             this.DataContext = new List<string>() {
             "首页","用户","设置"
             };
+            this.lt.SelectedIndex = 0;
         }
     }
 }

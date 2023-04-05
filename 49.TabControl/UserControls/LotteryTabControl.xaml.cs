@@ -37,7 +37,7 @@ namespace _49.TabControl.UserControls
         public LotteryTabControl() {
             InitializeComponent();
 
-            this.DataContext = this;
+            //this.DataContext = this;
 
         }
 
