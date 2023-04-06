@@ -1,5 +1,7 @@
-﻿using System;
+﻿using _48.plane.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -20,22 +22,29 @@ namespace _48.plane.UserControls {
     /// </summary>
     public partial class LotteryTabControl : UserControl {
 
-        public string Title {
-            get {
-                return (string)GetValue(TitleProperty);
-            }
-            set {
-                Debug.WriteLine(value);
-                SetValue(TitleProperty, value);
-            }
+
+
+
+        public ObservableCollection<DataHistory> DataList {
+            get { return (ObservableCollection<DataHistory>)GetValue(DataListProperty); }
+            set { SetValue(DataListProperty, value); }
         }
-        private static readonly DependencyProperty TitleProperty =
-            DependencyProperty.Register("Title", typeof(string), typeof(LotteryTabControl), new PropertyMetadata(null));
+
+        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty DataListProperty =
+            DependencyProperty.Register("DataList", typeof(ObservableCollection<DataHistory>), typeof(LotteryTabControl), new PropertyMetadata(null));
+
+
+
+
         public LotteryTabControl() {
             InitializeComponent();
 
-            this.DataContext = this;
+            //this.DataContext = this;
             //Debug.WriteLine(this.Title);
         }
     }
+
+
+
 }

@@ -9,10 +9,7 @@
     Width="800"
     Height="450">
     <Grid>
-        <TabControl
-            x:Name="TabCon"
-            ItemsSource="{Binding .}"
-            SelectionChanged="TabCon_SelectionChanged">
+        <TabControl x:Name="TabCon" SelectionChanged="TabCon_SelectionChanged">
             <TabItem Header="{Binding Title}">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -21,9 +18,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <!--  第一列历史数据  -->
-                    <UserC:LotteryTabControl Title="1231" />
-                    <TextBlock Grid.Column="1" Text="{Binding Title}" />
-                    <TextBlock Grid.Column="2" Text="xxx" />
+                    <UserC:LotteryTabControl DataList="{Binding Datas}" />
                 </Grid>
             </TabItem>
             <!--<TabControl.ItemTemplate>

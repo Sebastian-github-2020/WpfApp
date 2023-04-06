@@ -24,6 +24,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="5" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -93,10 +94,26 @@
             Background="{StaticResource background.value}"
             Content="00 ,00, 00, 00, 00"
             Style="{StaticResource textStyle}" />
-        <TextBlock
+        <ListView
             Grid.Row="5"
-            Background="Blue"
-            Foreground="White"
-            Text="{Binding ElementName=uc1, Path=Title}" />
+            Grid.ColumnSpan="6"
+            ItemsSource="{Binding ElementName=uc1, Path=DataList}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding Except}"
+                        Header="期数" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding OpenDate}"
+                        Header="日期" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding Result}"
+                        Header="结果" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

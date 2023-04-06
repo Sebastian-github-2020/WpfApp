@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -8,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace _45.获取windows网卡信息.ViewModels {
     public class MainViewModel : ViewModelBase {
-        private List<NetAdapterInfo> nets;
-        public List<NetAdapterInfo> Nets {
+        private ObservableCollection<NetAdapterInfo> nets;
+        public ObservableCollection<NetAdapterInfo> Nets {
             get {
                 return nets;
             }
@@ -33,7 +34,7 @@ namespace _45.获取windows网卡信息.ViewModels {
 
         public MainViewModel() {
             Debug.WriteLine("创建vm");
-            this.Nets = new List<NetAdapterInfo>();
+            this.Nets = new ObservableCollection<NetAdapterInfo>();
         }
 
         /// <summary>

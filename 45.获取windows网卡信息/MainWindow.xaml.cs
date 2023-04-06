@@ -51,12 +51,20 @@ namespace _45.获取windows网卡信息 {
             var tmpList = new List<NetAdapterInfo>();
             Debug.WriteLine($"vm对象Nets长度{this.Vm.Nets.Count.ToString()}");
             NetworkInterface[] nets = NetworkInterface.GetAllNetworkInterfaces();
+            //foreach(NetworkInterface net in nets) {
+            //    Debug.WriteLine(net.Name);
+            //    tmpList.Add(new NetAdapterInfo() { Name = net.Name });
+            //}
+            //Debug.WriteLine($"最终m对象Nets长度{this.Vm.Nets.Count.ToString()}");
+            //this.Vm.Nets = tmpList;//因为对象是引用类型
+
+
+
             foreach(NetworkInterface net in nets) {
                 Debug.WriteLine(net.Name);
-                tmpList.Add(new NetAdapterInfo() { Name = net.Name });
+                this.Vm.Nets.Add(new NetAdapterInfo() { Name = net.Name });
             }
-            Debug.WriteLine($"最终m对象Nets长度{this.Vm.Nets.Count.ToString()}");
-            this.Vm.Nets = tmpList;//因为对象是引用类型
+
         }
         /// <summary>
         /// 列表选择
