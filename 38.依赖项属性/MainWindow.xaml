@@ -11,6 +11,8 @@
     Height="450"
     mc:Ignorable="d">
     <UniformGrid Columns="3" Rows="3">
-        <user:MyButton Title="依赖属性吗" />
+        <user:MyButton Title="依赖属性吗" Content="依赖属性吗" />
+        <user:MyButton Title="{Binding Name}" Content="{Binding Name}" />
+        <TextBlock Text="{Binding Name}" />
     </UniformGrid>
 </Window>

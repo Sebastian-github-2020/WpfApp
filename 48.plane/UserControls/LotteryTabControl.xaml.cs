@@ -14,13 +14,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _48.plane.UserControls
-{
+namespace _48.plane.UserControls {
     /// <summary>
     /// LotteryTabControl.xaml 的交互逻辑
     /// </summary>
-    public partial class LotteryTabControl : UserControl
-    {
+    public partial class LotteryTabControl : UserControl {
 
         public string Title {
             get {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _38.依赖项属性.UserConrols {
+namespace _50.自定义控件.UserControls {
     /// <summary>
     /// MyButton.xaml 的交互逻辑
     /// </summary>
@@ -22,35 +21,38 @@ namespace _38.依赖项属性.UserConrols {
         public MyButton() {
             InitializeComponent();
         }
-
-        // usercontrol 默认的有content属性 而button也有content属性 因此，button 接收不到content内容，
-        // 1. 手动覆盖掉userControl的content,
-        // 2. 定义新的依赖属性
+        // 覆盖userContrl的Content
 
 
-
-        // 1.使用覆盖 userControl content的方式
-        public new Object Content {
-            get {
-                Debug.WriteLine(GetValue(ContentProperty));
-                return (Object)GetValue(ContentProperty);
-            }
+        public new object Content {
+            get { return (object)GetValue(ContentProperty); }
             set { SetValue(ContentProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Content.  This enables animation, styling, binding, etc...
         public new static readonly DependencyProperty ContentProperty =
-            DependencyProperty.Register("Content", typeof(Object), typeof(MyButton), new PropertyMetadata(null));
+            DependencyProperty.Register("Content", typeof(object), typeof(MyButton), new PropertyMetadata(null));
 
 
 
-
-        // 新建一个依赖属性 来接收 绑定的内容
         public string Title {
             get { return (string)GetValue(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
 
-        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(MyButton), new PropertyMetadata("默认值"));
+        // Using a DependencyProperty as the backing store for Title.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TitleProperty =
+            DependencyProperty.Register("Title", typeof(string), typeof(MyButton), new PropertyMetadata(null));
+
+
+
+
+
+        public ImageSource Source {
+            get { return (ImageSource)GetValue(SourceProperty); }
+            set { SetValue(SourceProperty, value); }
+        }
+        public static readonly DependencyProperty SourceProperty =
+            DependencyProperty.Register("Source", typeof(ImageSource), typeof(MyButton), new PropertyMetadata(null));
     }
 }

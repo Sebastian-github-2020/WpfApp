@@ -13,18 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _38.依赖项属性 {
+namespace _50.自定义控件 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            this.DataContext = new Person() { Name = "aaa" };
         }
-    }
-
-    class Person {
-        public string Name { get; set; }
     }
 }

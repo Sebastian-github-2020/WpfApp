@@ -14,25 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _49.TabControl
-{
+namespace _49.TabControl {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
-    {
+    public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
             this.tabs.SelectedIndex = 0;
-            this.DataContext = new
-            {
-                Devices = new List<Device> { new Device { Name = "设备1", Title = "标题1" }, new Device { Name = "设备2", Title = "标题2" } }
+            this.DataContext = new {
+                Devices = new List<Device> { new Device { Name = "设备1", Title = "标题12" }, new Device { Name = "设备2", Title = "标题22" } }
             };
         }
     }
 
-    class Device : ViewModelBase
-    {
+    class Device : ViewModelBase {
         private string name;
 
         public string Name {

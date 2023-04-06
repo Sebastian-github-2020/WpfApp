@@ -14,13 +14,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _49.TabControl.UserControls
-{
+namespace _49.TabControl.UserControls {
     /// <summary>
     /// LotteryTabControl.xaml 的交互逻辑
     /// </summary>
-    public partial class LotteryTabControl : UserControl
-    {
+    public partial class LotteryTabControl : UserControl {
         public string Title {
             get { return (string)GetValue(titleProperty); }
             set {
@@ -37,10 +35,14 @@ namespace _49.TabControl.UserControls
         public LotteryTabControl() {
             InitializeComponent();
 
-            this.DataContext = this;
+            //this.DataContext = this;
 
         }
-
+        /// <summary>
+        /// 属性值发生变化 的回调函数
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="e"></param>
         private static void OnpropertChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
             LotteryTabControl lt = (LotteryTabControl)d;
             Debug.WriteLine($"属性变化{lt.Title}");
