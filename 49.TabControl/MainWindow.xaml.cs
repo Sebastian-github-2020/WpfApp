@@ -23,7 +23,7 @@ namespace _49.TabControl {
             InitializeComponent();
             this.tabs.SelectedIndex = 0;
             this.DataContext = new {
-                Devices = new List<Device> { new Device { Name = "设备1", Title = "标题12" }, new Device { Name = "设备2", Title = "标题22" } }
+                Devices = new List<Device> { new Device { Name = "设备1", Title = "python" }, new Device { Name = "设备2", Title = "c#" } }
             };
         }
     }
