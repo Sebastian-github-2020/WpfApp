@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HttpRequest\HttpHelper.cs" />
+    <Compile Include="Tools\Tool.cs" />
     <Compile Include="ViewModel\DataHistory.cs" />
     <Compile Include="UserControls\LotteryTabControl.xaml.cs">
       <DependentUpon>LotteryTabControl.xaml</DependentUpon>
@@ -113,7 +115,6 @@
     <Resource Include="Images\YFLHC.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HttpRequest\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

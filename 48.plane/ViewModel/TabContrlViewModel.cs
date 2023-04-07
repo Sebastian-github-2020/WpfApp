@@ -138,7 +138,6 @@ namespace _48.plane.ViewModel {
             }
             this.Time = num.ToString();
             Debug.Write(this.Time);
-
         }
 
 
