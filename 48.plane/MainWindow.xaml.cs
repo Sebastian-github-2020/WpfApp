@@ -1,4 +1,5 @@
-﻿using _48.plane.Models;
+﻿
+using _48.plane.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,15 +24,38 @@ namespace _48.plane {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+            // 准备数据
+            //this.DataContext = new List<MainModel> {
+            // new MainModel {
+            //    Title = "一分六合彩",
+            //    LotteryCode = "YFLHC",
+            //    Icon= new BitmapImage(new Uri("pack://application:,,,/Images/YFLHC.png")),
+            //     DataList = new ObservableCollection<DataHistory>()
+            //   {
+            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" },
+            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" }
+            //    }
 
-            this.DataContext = new {
-                Title = "标题",
-                Datas = new ObservableCollection<DataHistory>()
-                {
-                    new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" },
-                    new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" }
-                }
-            };
+            //},
+            // new MainModel {
+            //    Title = "澳门六合彩",
+            //    LotteryCode = "AMLHC",
+            //     Icon= new BitmapImage(new Uri("pack://application:,,,/Images/AMLHC.png")),
+            //    DataList = new ObservableCollection<DataHistory>()
+            //   {
+            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" },
+            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" }
+            //    }
+
+            //}
+            //};
+
+            //初始化数据
+            this.DataContext = new MainModel();
+
+            // 默认选中0
+            this.TabCon.SelectedIndex = 0;
+
         }
         /// <summary>
         /// 切换tab

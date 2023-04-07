@@ -1,4 +1,4 @@
-﻿using _48.plane.Models;
+﻿using _48.plane.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -24,7 +24,9 @@ namespace _48.plane.UserControls {
 
 
 
-
+        /// <summary>
+        /// 历史数据
+        /// </summary>
         public ObservableCollection<DataHistory> DataList {
             get { return (ObservableCollection<DataHistory>)GetValue(DataListProperty); }
             set { SetValue(DataListProperty, value); }
@@ -33,6 +35,32 @@ namespace _48.plane.UserControls {
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DataListProperty =
             DependencyProperty.Register("DataList", typeof(ObservableCollection<DataHistory>), typeof(LotteryTabControl), new PropertyMetadata(null));
+
+
+
+
+
+        public BitmapImage Icon {
+            get { return (BitmapImage)GetValue(IconProperty); }
+            set { SetValue(IconProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IconProperty =
+            DependencyProperty.Register("Icon", typeof(BitmapImage), typeof(LotteryTabControl), new PropertyMetadata(null));
+
+
+
+
+
+        public TabContrlViewModel MyData {
+            get { return (TabContrlViewModel)GetValue(MyDataProperty); }
+            set { SetValue(MyDataProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyData.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MyDataProperty =
+            DependencyProperty.Register("MyData", typeof(TabContrlViewModel), typeof(LotteryTabControl), new PropertyMetadata(null));
 
 
 

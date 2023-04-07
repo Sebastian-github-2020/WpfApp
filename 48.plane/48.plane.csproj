@@ -55,11 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\DataHistory.cs" />
+    <Compile Include="ViewModel\DataHistory.cs" />
     <Compile Include="UserControls\LotteryTabControl.xaml.cs">
       <DependentUpon>LotteryTabControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MainModel.cs" />
+    <Compile Include="ViewModel\TabContrlViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +107,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AMLHC.png" />
+    <Resource Include="Images\YFLHC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HttpRequest\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

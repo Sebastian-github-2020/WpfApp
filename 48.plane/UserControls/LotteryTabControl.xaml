@@ -11,8 +11,14 @@
     mc:Ignorable="d">
     <UserControl.Resources>
         <SolidColorBrush x:Key="background.value" Color="AliceBlue" />
-        <SolidColorBrush x:Key="background.title" Color="HotPink" />
+        <SolidColorBrush x:Key="background.title" Color="#409EFF" />
+        <SolidColorBrush x:Key="title.color" Color="White" />
         <Style x:Key="textStyle" TargetType="Label">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="{StaticResource title.color}" />
+        </Style>
+        <Style x:Key="valueStyle" TargetType="Label">
             <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
         </Style>
@@ -24,7 +30,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="5" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" MaxHeight="200" />
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -40,7 +46,7 @@
             Grid.Row="0"
             Grid.RowSpan="3"
             Grid.Column="0"
-            Source="../Images/icon.png" />
+            Source="{Binding ElementName=uc1, Path=Icon}" />
         <Label
             Grid.Row="0"
             Grid.Column="2"
@@ -51,20 +57,20 @@
             Grid.Row="0"
             Grid.Column="3"
             Background="{StaticResource background.value}"
-            Content="1057"
-            Style="{StaticResource textStyle}" />
+            Content="{Binding ElementName=uc1, Path=MyData.CurrentExpect}"
+            Style="{StaticResource valueStyle}" />
         <Label
             Grid.Row="0"
             Grid.Column="4"
             Background="{StaticResource background.title}"
-            Content="上期"
+            Content="{Binding ElementName=uc1, Path=MyData.PreviousExpect}"
             Style="{StaticResource textStyle}" />
         <Label
             Grid.Row="0"
             Grid.Column="5"
             Background="{StaticResource background.value}"
             Content="1056"
-            Style="{StaticResource textStyle}" />
+            Style="{StaticResource valueStyle}" />
         <Label
             Grid.Row="2"
             Grid.Column="2"
@@ -77,8 +83,8 @@
             Grid.ColumnSpan="3"
             HorizontalContentAlignment="Center"
             Background="{StaticResource background.value}"
-            Content="00:00:00"
-            Style="{StaticResource textStyle}" />
+            Content="{Binding ElementName=uc1, Path=MyData.LeaveTime}"
+            Style="{StaticResource valueStyle}" />
         <!--  第二行本期结果  -->
         <Label
             Grid.Row="4"
@@ -92,11 +98,12 @@
             Grid.Column="2"
             Grid.ColumnSpan="4"
             Background="{StaticResource background.value}"
-            Content="00 ,00, 00, 00, 00"
-            Style="{StaticResource textStyle}" />
+            Content="{Binding ElementName=uc1, Path=MyData.CurrentResut}"
+            Style="{StaticResource valueStyle}" />
         <ListView
             Grid.Row="5"
             Grid.ColumnSpan="6"
+            MaxHeight="200"
             ItemsSource="{Binding ElementName=uc1, Path=DataList}">
             <ListView.View>
                 <GridView>
