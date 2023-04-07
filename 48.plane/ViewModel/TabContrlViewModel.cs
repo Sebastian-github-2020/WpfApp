@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace _48.plane.ViewModel {
     /// <summary>
@@ -66,6 +69,11 @@ namespace _48.plane.ViewModel {
         //图标
         public BitmapImage Icon { get; set; }
 
+        private DispatcherTimer Timer { get; set; }
+
+
+        public string Time { get; set; }
+
 
         /// <summary>
         /// 初始化tab数据
@@ -87,6 +95,17 @@ namespace _48.plane.ViewModel {
             this.History = history;
             this.CurrentResut = currentResut;
             this.Icon = icon;
+            this.Time = leaveTime;
+
+            // 创建定时器
+            Timer = new DispatcherTimer();
+            Timer.Interval = new TimeSpan(0, 0, 1);// 设置间隔1秒
+            Timer.Tick += (object sender, EventArgs e) => {
+                TimeIntevel();
+            }; // 定时器回调
+            if(this.LeaveTime != null) {
+                Timer.Start();
+            }
         }
 
         /// <summary>
@@ -106,13 +125,22 @@ namespace _48.plane.ViewModel {
         /// <summary>
         /// 倒计时
         /// </summary>
-        /// <param name="time"></param>
         /// <returns></returns>
-        public static string TimeIntevel(string time) {
-            int num = Convert.ToInt32(time);
+        public void TimeIntevel() {
+
+            int num = Convert.ToInt32(this.Time);
             num--;
-            if(num <= 0) return "0";
-            return num.ToString();
+            if(num <= 0) {
+                this.Timer.Stop();
+                this.LeaveTime = FormateLeaveTime("0");
+            } else {
+                this.LeaveTime = FormateLeaveTime(num.ToString());
+            }
+            this.Time = num.ToString();
+            Debug.Write(this.Time);
+
         }
+
+
     }
 }

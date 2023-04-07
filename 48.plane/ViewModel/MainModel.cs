@@ -59,6 +59,8 @@ namespace _48.plane.ViewModel {
                     new DataHistory { Except = "1058", OpenDate = "2022-15-13", Result = "00 05 12 36 41 02" },
                     new DataHistory { Except = "1058", OpenDate = "2022-15-13", Result = "00 05 12 36 41 02" }
             }));
+
+
         }
 
     }
