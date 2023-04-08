@@ -27,7 +27,8 @@ string MakeMd5(string t) {
     MD5 md5 = MD5.Create();
     byte[] res = md5.ComputeHash(Encoding.Default.GetBytes(t));
     StringBuilder sb = new StringBuilder();
-    for(int i = 0; i < res.Length; i++) {
+    for(int i = 0; i < res.Length; i++)
+    {
         sb.Append(res[i].ToString("X2"));
     }
     return sb.ToString().ToUpper();

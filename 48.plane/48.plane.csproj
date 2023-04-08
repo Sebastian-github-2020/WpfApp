@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HttpRequest\Api.cs" />
     <Compile Include="HttpRequest\HttpHelper.cs" />
+    <Compile Include="Models\HistoryModel.cs" />
     <Compile Include="Tools\Tool.cs" />
     <Compile Include="ViewModel\DataHistory.cs" />
     <Compile Include="UserControls\LotteryTabControl.xaml.cs">
@@ -114,8 +118,6 @@
     <Resource Include="Images\AMLHC.png" />
     <Resource Include="Images\YFLHC.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

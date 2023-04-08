@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49.TabControl", "49.TabCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50.自定义控件", "50.自定义控件\50.自定义控件.csproj", "{48A34350-F1FD-4388-895C-7951A02D5D5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework测试", "framework测试\framework测试.csproj", "{E82D9102-5294-4D10-B0BF-824A0717E601}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -541,6 +543,14 @@ Global
 		{48A34350-F1FD-4388-895C-7951A02D5D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48A34350-F1FD-4388-895C-7951A02D5D5C}.Release|x86.ActiveCfg = Release|Any CPU
 		{48A34350-F1FD-4388-895C-7951A02D5D5C}.Release|x86.Build.0 = Release|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Debug|x86.Build.0 = Debug|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Release|x86.ActiveCfg = Release|Any CPU
+		{E82D9102-5294-4D10-B0BF-824A0717E601}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
