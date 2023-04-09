@@ -11,5 +11,10 @@ namespace _48.plane.Models
         public int PeriodsId { get; set; }
 
         public string lhcDrawingZodiac { get; set; }
+
+        public string theoryDrawingDate { get; set; }
+
+        public string autoOpenDate { get; set; }
+
     }
 }
