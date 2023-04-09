@@ -59,6 +59,7 @@
     </ApplicationDefinition>
     <Compile Include="HttpRequest\Api.cs" />
     <Compile Include="HttpRequest\HttpHelper.cs" />
+    <Compile Include="Models\LotteryModel.cs" />
     <Compile Include="Models\ResponseListDataModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Tools\Tool.cs" />
