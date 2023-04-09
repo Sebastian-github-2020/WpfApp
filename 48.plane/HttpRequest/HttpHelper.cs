@@ -29,14 +29,29 @@ namespace _48.plane.HttpRequest
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        public static async Task RequestGet(string url) {
+        public static async Task<string> RequestGet(string url) {
             HeaderConfig();
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if(response.IsSuccessStatusCode)
             {
                 Debug.Write(response.Content);
+                return await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                return "403";
             }
         }
+
+        //public static async Task<T> RequestPost(string url, HttpContent content) {
+        //    HeaderConfig();
+        //    HttpResponseMessage response = await _httpClient.PostAsync(url, content);
+        //    if(response.IsSuccessStatusCode)
+        //    {
+        //        // 字符串序列化对象
+
+        //    }
+        //}
 
         /// <summary>
         /// 配置header uuid 和sign
@@ -45,7 +60,9 @@ namespace _48.plane.HttpRequest
             string uuid = Tool.MakeUUID();
             _httpClient.DefaultRequestHeaders.Add("x-auth-uu", uuid);
             _httpClient.DefaultRequestHeaders.Add("x-auth-sign", Tool.MakeSign(uuid, SecritKey));
-            _httpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
+            // 添加
+            _httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
         }
 
 

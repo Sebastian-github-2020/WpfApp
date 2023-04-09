@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using _48.plane.Tools;
+using _48.plane.HttpRequest;
+using System.Text.Json.Serialization;
 
 namespace framework测试
 {
@@ -13,16 +16,33 @@ namespace framework测试
             // 序列化u对象
             string a = JsonSerializer.Serialize<Person>(new Person { Name = "zaks", Age = 20 });
             Console.WriteLine($"序列化对象Person:{a}");
-            Person b = JsonSerializer.Deserialize<Person>(a);
+            Person b = JsonSerializer.Deserialize<Person>("{\"name\":\"liux\",\"age\":20}");
             Console.WriteLine($"反序列化对象Person:{b}");
+
+
+
+
+            // NewMethod();
             Console.ReadLine();
+        }
+
+        private async static void NewMethod() {
+            // 网络请求测试
+            string da = await HttpHelper.RequestGet("https://httpbin.org/get");
+            Console.WriteLine(da);
+
         }
     }
 
     class Person
     {
+        [JsonPropertyName("age")]
         public int Age { get; set; }
+        [JsonPropertyName("name")]
         public string Name { get; set; }
+        public override string ToString() {
+            return $"Name:{Name},Age:{Age}";
+        }
 
     }
 
