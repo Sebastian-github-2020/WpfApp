@@ -6,13 +6,14 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using _48.plane.Models;
 using _48.plane.Tools;
 namespace _48.plane.HttpRequest
 {
     /// <summary>
     /// http工具类
     /// </summary>
-    public class HttpHelper
+    public class HttpHelper<T>
     {
         private static readonly HttpClient _httpClient = new HttpClient();
         private static string SecritKey = "9&N4orgck9M!rh2#Wpfyg2Q!teDds8Bl";
@@ -43,15 +44,17 @@ namespace _48.plane.HttpRequest
             }
         }
 
-        //public static async Task<T> RequestPost(string url, HttpContent content) {
-        //    HeaderConfig();
-        //    HttpResponseMessage response = await _httpClient.PostAsync(url, content);
-        //    if(response.IsSuccessStatusCode)
-        //    {
-        //        // 字符串序列化对象
+        public static async Task<ResponseModel<T>> RequestPost(string url, HttpContent content) {
+            HeaderConfig();
+            HttpResponseMessage response = await _httpClient.PostAsync(url, content);
+            if(response.IsSuccessStatusCode)
+            {
+                // 字符串序列化对象
+                string jsonStr = await response.Content.ReadAsStringAsync();
+                JsonSerializer.Deserialize<ResponseListDataModel<T>>(jsonStr);
 
-        //    }
-        //}
+            }
+        }
 
         /// <summary>
         /// 配置header uuid 和sign

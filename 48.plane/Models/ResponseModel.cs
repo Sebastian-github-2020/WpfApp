@@ -10,9 +10,16 @@ namespace _48.plane.Models
     /// <summary>
     /// 历史数据模型,将js的
     /// </summary>
-    public class HistoryModel
+    public class ResponseModel<T>
     {
         [JsonPropertyName("code")]
         public string Code { get; set; }
+
+        [JsonPropertyName("data")]
+        public ResponseListDataModel<T> Data { get; set; }
+
+        [JsonPropertyName("msg")]
+        public string Msg { get; set; }
+
     }
 }
