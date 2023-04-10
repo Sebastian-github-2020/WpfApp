@@ -5,11 +5,11 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
-namespace _48.plane.Tools
-{
-    public static class Tool
-    {
+namespace _48.plane.Tools {
+    public static class Tool {
         /// <summary>
         /// 生成UUID
         /// </summary>
@@ -37,8 +37,7 @@ namespace _48.plane.Tools
             MD5 md5 = MD5.Create();
             byte[] res = md5.ComputeHash(Encoding.Default.GetBytes(txt));
             StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < res.Length; i++)
-            {
+            for(int i = 0; i < res.Length; i++) {
                 sb.Append(res[i].ToString("X2"));
             }
             return sb.ToString().ToUpper();
@@ -63,7 +62,7 @@ namespace _48.plane.Tools
         /// <param name="obj"></param>
         /// <returns></returns>
         public static string MySerializer<T>(T obj) {
-            return JsonSerializer.Serialize<T>(obj);
+            return JsonSerializer.Serialize<T>(obj, new JsonSerializerOptions() { Encoder = JavaScriptEncoder.Create(UnicodeRanges.All) });
         }
     }
 }
