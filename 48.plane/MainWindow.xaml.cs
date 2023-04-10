@@ -25,45 +25,26 @@ namespace _48.plane {
         public MainWindow() {
             InitializeComponent();
             // 准备数据
-            //this.DataContext = new List<MainModel> {
-            // new MainModel {
-            //    Title = "一分六合彩",
-            //    LotteryCode = "YFLHC",
-            //    Icon= new BitmapImage(new Uri("pack://application:,,,/Images/YFLHC.png")),
-            //     DataList = new ObservableCollection<DataHistory>()
-            //   {
-            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" },
-            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" }
-            //    }
-
-            //},
-            // new MainModel {
-            //    Title = "澳门六合彩",
-            //    LotteryCode = "AMLHC",
-            //     Icon= new BitmapImage(new Uri("pack://application:,,,/Images/AMLHC.png")),
-            //    DataList = new ObservableCollection<DataHistory>()
-            //   {
-            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" },
-            //        new DataHistory { Except = "1057", OpenDate = "2022-15-12", Result = "00 05 12 36 41 02" }
-            //    }
-
-            //}
-            //};
-
-            //初始化数据
+            //初始化数据           
             this.DataContext = new MainModel();
 
             // 默认选中0
             this.TabCon.SelectedIndex = 0;
 
+
         }
         /// <summary>
-        /// 切换tab
+        /// 切换tab 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TabCon_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             TabControl tab = (TabControl)sender;
+            // 根绝切换的index请求对应的数据
+            Debug.WriteLine(tab.SelectedItem);
+            // 根据索引 请求对应code的数据
+            MainModel handle = this.DataContext as MainModel;
+            handle.GetHistoryData("嘿嘿嘿", tab.SelectedIndex);
         }
     }
 }

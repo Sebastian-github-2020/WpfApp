@@ -24,15 +24,16 @@ namespace framework测试 {
 
 
 
-            NewMethod();
+            NewMethod("SANFK3");
+            NewMethod("HKLHC");
             Console.ReadLine();
         }
 
-        private async static void NewMethod() {
+        private async static void NewMethod(string code) {
             // 网络请求测试
             //string da = await HttpHelper<string>.RequestGet("https://httpbin.org/get");
             //Console.WriteLine(da);
-            var jsonParams = JsonSerializer.Serialize(new { limite = 30, lotteryCode = "YFLHC" });
+            var jsonParams = JsonSerializer.Serialize(new { limite = 30, lotteryCode = code });
             //var jsonParams = JsonSerializer.Serialize("{\"name\":\"zaks\"}");
             Console.WriteLine(jsonParams);
             Console.WriteLine("-----------------------");
@@ -41,7 +42,7 @@ namespace framework测试 {
             var rawData = await HttpHelper.RequestPost<LotteryModel>("https://5981aa.com/melody/api/v1/lotteryperiods/queryHisPeriodsPage", content);
             //var rawData = await HttpHelper<string>.GetInstance().PostAsync("https://httpbin.org/post", content);
             Console.WriteLine(JsonSerializer.Serialize(rawData, new JsonSerializerOptions() { Encoder = System.Text.Encodings.Web.JavaScriptEncoder.Create(UnicodeRanges.All) }));
-
+            Console.WriteLine("-----------------------");
         }
     }
 

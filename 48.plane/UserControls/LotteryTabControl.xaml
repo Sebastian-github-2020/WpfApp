@@ -63,13 +63,13 @@
             Grid.Row="0"
             Grid.Column="4"
             Background="{StaticResource background.title}"
-            Content="{Binding ElementName=uc1, Path=MyData.PreviousExpect}"
+            Content="上期"
             Style="{StaticResource textStyle}" />
         <Label
             Grid.Row="0"
             Grid.Column="5"
             Background="{StaticResource background.value}"
-            Content="1056"
+            Content="{Binding ElementName=uc1, Path=MyData.PreviousExpect}"
             Style="{StaticResource valueStyle}" />
         <Label
             Grid.Row="2"
