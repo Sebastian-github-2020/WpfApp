@@ -32,6 +32,8 @@ namespace _48.plane {
             this.TabCon.SelectedIndex = 0;
 
 
+
+
         }
         /// <summary>
         /// 切换tab 
