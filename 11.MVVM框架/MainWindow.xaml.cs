@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _11.MVVM框架.Pages;
+using _11.MVVM框架.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +20,17 @@ namespace _11.MVVM框架 {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+
+
         public MainWindow() {
             InitializeComponent();
-            this.DataContext = new MainViewModel1();
+            this.DataContext = new MainViewModel();
+        }
+
+        private void ButtonOpen_Click(object sender, RoutedEventArgs e) {
+
+            var _window = new Window1();
+            _window.Show();
         }
     }
 }
