@@ -63,6 +63,10 @@
     </ApplicationDefinition>
     <Compile Include="HttpRequest\Api.cs" />
     <Compile Include="HttpRequest\HttpHelper.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginResponseModel.cs" />
     <Compile Include="Models\LotteryModel.cs" />
     <Compile Include="Models\ResponseListDataModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
@@ -75,6 +79,10 @@
     <Compile Include="ViewModel\MainModel.cs" />
     <Compile Include="ViewModel\TabContrlViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

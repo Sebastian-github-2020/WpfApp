@@ -133,6 +133,7 @@ namespace _48.plane.ViewModel {
             if(num <= 0) {
                 this.Timer.Stop();
                 this.LeaveTime = FormateLeaveTime("0");
+                // 发送通知
             } else {
                 this.LeaveTime = FormateLeaveTime(num.ToString());
             }

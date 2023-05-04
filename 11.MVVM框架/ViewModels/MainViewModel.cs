@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,15 @@ namespace _11.MVVM框架.ViewModels {
             set { SetProperty(ref title, value); }
         }
 
+        //可监听的列表
+        private ObservableCollection<string> name = null!;
+
+        public ObservableCollection<string> Name {
+            get { return name; }
+            set { SetProperty(ref name, value); }
+        }
+
+
         //命令
         public RelayCommand ButtonClickCommand { get; } = null!;
 
@@ -26,6 +36,7 @@ namespace _11.MVVM框架.ViewModels {
             Title = "hello msg";
             // 注册消息监听
             WeakReferenceMessenger.Default.Register<string, string>(this, "windows", ShowMsg);
+
         }
 
         void SendMsg() {
