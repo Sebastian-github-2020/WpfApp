@@ -38,6 +38,13 @@ namespace _48.plane.HttpRequest {
 
         }
 
+        /// <summary>
+        /// Post 请求
+        /// </summary>
+        /// <typeparam name="T">返回类型</typeparam>
+        /// <param name="url"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
         public static async Task<ResponseModel<T>> RequestPost<T>(string url, HttpContent content) {
             #region using方式创建httpclient
 
@@ -74,6 +81,7 @@ namespace _48.plane.HttpRequest {
             string uuid = Tool.MakeUUID();
             httpClient.DefaultRequestHeaders.Add("x-auth-uu", uuid);
             httpClient.DefaultRequestHeaders.Add("x-auth-sign", Tool.MakeSign(uuid, SecritKey));
+
             // 添加
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 

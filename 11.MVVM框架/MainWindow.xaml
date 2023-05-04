@@ -5,17 +5,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:_11.MVVM框架"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
+    Title="windows"
     Width="800"
     Height="450"
     mc:Ignorable="d">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <Button
-                Command="{Binding CommandShow2}"
-                CommandParameter="{Binding ElementName=Text, Path=Text}"
-                Content="按钮1" />
-            <TextBox x:Name="Text" Text="{Binding Name1}" />
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Command="{Binding ButtonClickCommand}"
+            CommandParameter="{Binding ElementName=Text, Path=Text}"
+            Content="发送消息" />
+        <TextBox
+            x:Name="Text"
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="{Binding Title}" />
+        <Button
+            x:Name="ButtonOpen"
+            Grid.Row="0"
+            Grid.Column="2"
+            Click="ButtonOpen_Click">
+            打开新窗口
+        </Button>
     </Grid>
 </Window>

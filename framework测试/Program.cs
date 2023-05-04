@@ -24,8 +24,9 @@ namespace framework测试 {
 
 
 
-            NewMethod("SANFK3");
-            NewMethod("HKLHC");
+            //NewMethod("SANFK3");
+            //NewMethod("HKLHC");
+            NewMethod1();
             Console.ReadLine();
         }
 
@@ -44,17 +45,44 @@ namespace framework测试 {
             Console.WriteLine(JsonSerializer.Serialize(rawData, new JsonSerializerOptions() { Encoder = System.Text.Encodings.Web.JavaScriptEncoder.Create(UnicodeRanges.All) }));
             Console.WriteLine("-----------------------");
         }
+
+        private async static void NewMethod1() {
+            // 网络请求测试
+            //string da = await HttpHelper<string>.RequestGet("https://httpbin.org/get");
+            //Console.WriteLine(da);
+            var jsonParams = JsonSerializer.Serialize(new { friendMemberAccount = "tiezi000", contentType = 1000, content = "应该是可以了", uuid = Guid.NewGuid().ToString() });
+            var content = new StringContent(jsonParams);
+            content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+            string uuid = Tool.MakeUUID();
+            using(HttpClient httpClient = new HttpClient()) {
+                httpClient.DefaultRequestHeaders.Add("x-auth-uu", uuid);
+                httpClient.DefaultRequestHeaders.Add("x-auth-token", "42b813e4-d3c1-4a5d-9f15-cd09715aed93");
+                httpClient.DefaultRequestHeaders.Add("x-auth-sign", Tool.MakeSign(uuid, "9&N4orgck9M!rh2#Wpfyg2Q!teDds8Bl"));
+                // 添加
+                httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = await httpClient.PostAsync("https://ymhvhblt11-im-tyy.wuguanc.xyz/lark/api/v1/wxP2PChat/sendMsg", content);
+                if(response.IsSuccessStatusCode) {
+                    string res = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(res);
+                }
+            }
+
+
+        }
     }
 
-    class Person {
-        [JsonPropertyName("age")]
-        public int Age { get; set; }
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-        public override string ToString() {
-            return $"Name:{Name},Age:{Age}";
-        }
 
+}
+
+class Person {
+    [JsonPropertyName("age")]
+    public int Age { get; set; }
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+    public override string ToString() {
+        return $"Name:{Name},Age:{Age}";
     }
 
 }
+
+

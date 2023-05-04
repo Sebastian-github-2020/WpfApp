@@ -11,5 +11,12 @@ namespace _48.plane {
     /// App.xaml 的交互逻辑
     /// </summary>
     public partial class App : Application {
+
+        protected override void OnStartup(StartupEventArgs e) {
+            // 设置等待页面
+            //SplashScreen splashScreen = new SplashScreen("Images/icon.png");
+            //splashScreen.Show(true);
+            base.OnStartup(e);
+        }
     }
 }

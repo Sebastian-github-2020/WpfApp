@@ -8,20 +8,21 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace _48.plane.ViewModel {
     /// <summary>
     /// TabContrlViewModel 
     /// </summary>
-    public class TabContrlViewModel : ViewModelBase {
+    public class TabContrlViewModel : ObservableObject {
         /// <summary>
         /// tab、标题
         /// </summary>
         private string title;
 
         public string Title {
-            get { return title; }
-            set { title = value; OnPropertyChanged(); }
+            get => title;
+            set => SetProperty(ref title, value);
         }
 
         /// <summary>
@@ -35,18 +36,17 @@ namespace _48.plane.ViewModel {
         private ObservableCollection<DataHistory> history;
 
         public ObservableCollection<DataHistory> History {
-            get { return history; }
-            set { history = value; OnPropertyChanged(); }
+            get => history;
+            set => SetProperty(ref history, value);
         }
         // 本期 期数
         private string currentExpect;
-        public string CurrentExpect { get { return currentExpect; } set { currentExpect = value; OnPropertyChanged(); } }
+        public string CurrentExpect { get => currentExpect; set => SetProperty(ref currentExpect, value); }
         //上一期 期数
         private string previousExpect;
 
         public string PreviousExpect {
-            get { return previousExpect; }
-            set { previousExpect = value; OnPropertyChanged(); }
+            get => previousExpect; set => SetProperty(ref previousExpect, value);
         }
 
 
@@ -54,8 +54,7 @@ namespace _48.plane.ViewModel {
         private string leaveTime;
 
         public string LeaveTime {
-            get { return leaveTime; }
-            set { leaveTime = value; OnPropertyChanged(); }
+            get => leaveTime; set => SetProperty(ref leaveTime, value);
         }
 
 
@@ -63,8 +62,7 @@ namespace _48.plane.ViewModel {
         private string currentResut;
 
         public string CurrentResut {
-            get { return currentResut; }
-            set { currentResut = value; OnPropertyChanged(); }
+            get => currentResut; set => SetProperty(ref currentResut, value);
         }
         //图标
         public BitmapImage Icon { get; set; }
@@ -133,6 +131,7 @@ namespace _48.plane.ViewModel {
             if(num <= 0) {
                 this.Timer.Stop();
                 this.LeaveTime = FormateLeaveTime("0");
+                // 发送通知
             } else {
                 this.LeaveTime = FormateLeaveTime(num.ToString());
             }
