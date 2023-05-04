@@ -34,41 +34,13 @@ namespace _48.plane {
         // 执行登录
         async private void LoginBtn_Click(object sender, RoutedEventArgs e) {
             Debug.WriteLine("开始登录");
-            using(HttpClient httpClient = new HttpClient()) {
-                // 设置header
-                string uuid = Tool.MakeUUID();
-                httpClient.DefaultRequestHeaders.Add("x-auth-uu", uuid);
-                httpClient.DefaultRequestHeaders.Add("x-auth-sign", Tool.MakeSign(uuid, "9&N4orgck9M!rh2#Wpfyg2Q!teDds8Bl"));
-                var a = httpClient.DefaultRequestHeaders;
-                // 添加
-                httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-                string jsonParse = JsonSerializer.Serialize(new { memberAccount = this.account.Text, password = this.password.Password, zhuakuaiValidate = "" });
-                StringContent content = new StringContent(jsonParse);
-
-                //var response = await httpClient.PostAsync("https://httpbin.org/post", content);
-                var response = await httpClient.PostAsync("https://5981aa.com/melody/api/v1/memberuser/login", content);
-                if(response.IsSuccessStatusCode) {
-                    // 读取返回的内容
-                    string res = await response.Content.ReadAsStringAsync();
-                    LoginResponseModel lrm = JsonSerializer.Deserialize<LoginResponseModel>(res);
-                    Debug.WriteLine(res);
-                    if(lrm.Code.Equals("12200")) {
-                        Debug.WriteLine("登录成功");
-                        // 登录成功 读取header里面的token
-
-                        foreach(var item in response.Headers) {
-                            Debug.WriteLine(item);
-                        }
-                    } else {
-                        foreach(var item in response.Headers) {
-                            Debug.WriteLine(item.Key);
-                        }
-                        MessageBox.Show(lrm.Msg);
-                    }
-
-                    httpClient.Dispose();
-                }
+            bool res = await Api.Login(this.account.Text, this.password.Password);
+            if(res) {
+                var main = new MainWindow();
+                main.Show();
+                this.Close();
+            } else {
+                MessageBox.Show("登录失败");
             }
         }
     }

@@ -12,15 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using _48.plane.HttpRequest;
 using _48.plane.Models;
+using CommunityToolkit.Mvvm;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace _48.plane.ViewModel {
-    public class MainModel : ViewModelBase {
+    public class MainModel : ObservableObject {
 
         private ObservableCollection<TabContrlViewModel> tabData;
 
         public ObservableCollection<TabContrlViewModel> TabData {
-            get { return tabData; }
-            set { tabData = value; }
+            get => tabData;
+            set => SetProperty(ref tabData, value);
         }
 
 
@@ -35,7 +37,7 @@ namespace _48.plane.ViewModel {
             // 请求历史数据
             _ = InitData();
 
-
+            #region 手写的假数据
             //this.TabData.Add(new TabContrlViewModel(
             //    new BitmapImage(new Uri("pack://application:,,,/Images/YFLHC.png")),
             //    title: "一分六合彩",
@@ -70,6 +72,8 @@ namespace _48.plane.ViewModel {
             //        new DataHistory { Except = "1058", OpenDate = "2022-15-13", Result = "00 05 12 36 41 02" },
             //        new DataHistory { Except = "1058", OpenDate = "2022-15-13", Result = "00 05 12 36 41 02" }
             //}));
+            #endregion
+
 
 
         }
@@ -86,15 +90,14 @@ namespace _48.plane.ViewModel {
             //    //HttpHelper.RequestPost()
             //}
             Debug.WriteLine($"{code}-{index}");
-            //
-            // this.TabData[index].Title = $"{this.TabData[index].Title}{DateTime.Now}";
+
         }
         /// <summary>
         /// 初始化数据
         /// </summary>
         public async Task InitData() {
             List<TabConfig> TabConfigs = new List<TabConfig>();
-            TabConfigs.Add(new TabConfig("五分六合彩", "HKLHC", 1, new BitmapImage(new Uri("pack://application:,,,/Images/AMLHC.png"))));
+            TabConfigs.Add(new TabConfig("五分六合彩", "WFLHC", 1, new BitmapImage(new Uri("pack://application:,,,/Images/AMLHC.png"))));
 
             TabConfigs.Add(new TabConfig("五分快3", "WFK3", 0, new BitmapImage(new Uri("pack://application:,,,/Images/YFLHC.png"))));
             // 根据列表配置来请求数据
@@ -104,15 +107,22 @@ namespace _48.plane.ViewModel {
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 var response = await HttpHelper.RequestPost<LotteryModel>("https://5981aa.com/melody/api/v1/lotteryperiods/queryHisPeriodsPage", content);
                 var history = response.Data.List;
-                var currentExpect = history[0].PeriodsNumber;
-                var currentResult = history[0].DrawingNumber;
-                var previousExpect = history[1].PeriodsNumber;
+                var currentExpect = history[0].PeriodsNumber.Substring(7);
+                var currentResult = item.Code.EndsWith("LHC") ? history[0].LhcDrawingZodiac : history[0].DrawingNumber;
+                var previousExpect = history[1].PeriodsNumber.Substring(7);
                 var newD = new ObservableCollection<DataHistory>();
                 //数据映射
                 foreach(LotteryModel his in response.Data.List) {
-                    newD.Add(
-                        new DataHistory() { Except = his.PeriodsNumber, OpenDate = his.TheoryDrawingDate, Result = his.DrawingNumber }
-                    );
+                    if(item.Code.EndsWith("LHC")) {
+                        newD.Add(
+                           new DataHistory() { Except = his.PeriodsNumber.Substring(7), OpenDate = his.TheoryDrawingDate, Result = his.LhcDrawingZodiac }
+                       );
+                    } else {
+                        newD.Add(
+                       new DataHistory() { Except = his.PeriodsNumber.Substring(7), OpenDate = his.TheoryDrawingDate, Result = his.DrawingNumber }
+                   );
+                    }
+
                 }
 
                 //填装数据
@@ -131,6 +141,10 @@ namespace _48.plane.ViewModel {
         }
 
     }
+
+    /// <summary>
+    /// tab选项卡 配置
+    /// </summary>
     class TabConfig {
         public string Title { get; set; }
         public string Code { get; set; }

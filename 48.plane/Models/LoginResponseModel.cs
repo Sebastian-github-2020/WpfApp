@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace _48.plane.Models {
     public class LoginResponseModel {
         [JsonPropertyName("code")]
-        public int Code { get; set; }
+        public string Code { get; set; }
         [JsonPropertyName("msg")]
         public string Msg { get; set; }
     }

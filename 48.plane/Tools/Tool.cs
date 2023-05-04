@@ -11,6 +11,10 @@ using System.Text.Unicode;
 namespace _48.plane.Tools {
     public static class Tool {
         /// <summary>
+        /// 记录token
+        /// </summary>
+        public static string Token = string.Empty;
+        /// <summary>
         /// 生成UUID
         /// </summary>
         /// <returns></returns>
