@@ -10,12 +10,12 @@ using _48.plane.Models;
 using _48.plane.Tools;
 namespace _48.plane.HttpRequest {
     /// <summary>
-    /// http工具类
+    /// http工具类 封装请求
     /// </summary>
     public class HttpHelper {
 
         private static string SecritKey = "9&N4orgck9M!rh2#Wpfyg2Q!teDds8Bl";
-        private static HttpClient _httpClient = new HttpClient();
+
 
 
 
