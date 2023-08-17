@@ -13,21 +13,56 @@
         <StackPanel Orientation="Vertical">
             <Slider
                 x:Name="slider"
+                Cursor="Hand"
                 Maximum="100"
-                Minimum="1" />
+                Minimum="1"
+                SmallChange="3" />
             <!--  绑定slider的属性 默认是value 而且是双向绑定，注意TextBox需要失去焦点后才会更新 value到slider  -->
+            <!--  ElementName指定绑定的元素，Path指的是绑定的属性，UpdateSourceTrigger：数据更新的触发方式,Mode:双向或单向或  -->
             <TextBox
                 Height="30"
                 Margin="10,0"
-                Text="{Binding ElementName=slider, Path=Value,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" />
+                Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+            <!--  单向绑定  -->
+
+
             <TextBox
                 Height="30"
                 Margin="10,0"
-                Text="{Binding ElementName=slider, Path=Value, Mode=OneWay}" />
+                Text="{Binding ElementName=slider, Path=Value, Mode=OneTime}" />
+            <!--  指定数据源的对象 这里是父级，比较繁琐的写法  -->
+            <TextBox Height="30" Margin="10,0">
+                <TextBox.Text>
+                    <Binding Path="DataContext.Name">
+                        <Binding.RelativeSource>
+                            <RelativeSource
+                                AncestorLevel="1"
+                                AncestorType="Window"
+                                Mode="FindAncestor" />
+                        </Binding.RelativeSource>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
+            <TextBox
+                Height="30"
+                Margin="10,0"
+                Text="{Binding Path=DataContext.Name, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" />
+            <!--  简单的写法 数据直接绑定到当前窗口的DataContent上 可以直接绑定  -->
             <TextBox
                 Height="30"
                 Margin="10,0"
                 Text="{Binding Name}" />
+
+            <Button>
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <CheckBox Content="ok?"  Checked="check_Checked" Unchecked="check_Unchecked"  x:Name="check"/>
         </StackPanel>
     </Grid>
 </Window>

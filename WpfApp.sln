@@ -111,7 +111,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50.自定义控件", "50.�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework测试", "framework测试\framework测试.csproj", "{E82D9102-5294-4D10-B0BF-824A0717E601}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "51.WpfBlazor", "51.WpfBlazor\51.WpfBlazor.csproj", "{404EBD91-F5CF-44D3-BFA6-40183B093BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "51.WpfBlazor", "51.WpfBlazor\51.WpfBlazor.csproj", "{404EBD91-F5CF-44D3-BFA6-40183B093BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "52.转换器Conver", "52.转换器Conver\52.转换器Conver.csproj", "{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -561,6 +563,14 @@ Global
 		{404EBD91-F5CF-44D3-BFA6-40183B093BEA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{404EBD91-F5CF-44D3-BFA6-40183B093BEA}.Release|x86.ActiveCfg = Release|Any CPU
 		{404EBD91-F5CF-44D3-BFA6-40183B093BEA}.Release|x86.Build.0 = Release|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Debug|x86.Build.0 = Debug|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|x86.ActiveCfg = Release|Any CPU
+		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

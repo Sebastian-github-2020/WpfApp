@@ -3,14 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>_16.控件Expand</RootNamespace>
+    <RootNamespace>_52.转换器Conver</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
-  </ItemGroup>
 
 </Project>

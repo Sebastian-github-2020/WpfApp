@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +30,29 @@ namespace _09.WPF绑定 {
 
         }
 
+
+        /// <summary>
+        /// 选中的事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void check_Checked(object sender, RoutedEventArgs e) {
+            var s = sender as CheckBox;
+            Debug.WriteLine($"选中了：{s.IsChecked}");
+        }
+        /// <summary>
+        /// 取消的事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void check_Unchecked(object sender, RoutedEventArgs e) {
+            var s = sender as CheckBox;
+            Debug.WriteLine($"取消选中：{s.IsChecked}");
+        }
     }
     class Person {
         public string? Name { get; set; }
     }
+
+
 }
