@@ -10,54 +10,21 @@
     Height="450"
     mc:Ignorable="d">
     <Window.Resources>
-        <Style x:Key="baseButton" TargetType="Button">
-            <Setter Property="FontSize" Value="30" />
-            <Setter Property="Background" Value="LightYellow" />
-            <Setter Property="Width" Value="100" />
-            <Setter Property="FontSize" Value="15" />
-            <Setter Property="Height" Value="30" />
-        </Style>
-        <!--  继承上面的样式  -->
-        <Style
-            x:Key="mybtn"
-            BasedOn="{StaticResource baseButton}"
-            TargetType="Button">
+        <!--  自定义样式  -->
+        <Style x:Key="btn" TargetType="Button">
             <Setter Property="Foreground" Value="Red" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
         </Style>
     </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <!--  第一行 按钮样式  -->
-        <StackPanel Orientation="Horizontal">
-            <Button
-                Width="230"
-                Content="当前文件的样式文件"
-                Style="{StaticResource mybtn}" />
-            <!--  使用了外部样式文件 buttonStyle.xaml 在app。xaml里面合并的  -->
-            <Button
-                Width="200"
-                Content="全局样式文件"
-                Style="{StaticResource baseButton1}" />
-            <Button
-                Width="100"
-                Background="Blue"
-                Content="默认按钮"
-                Foreground="White" />
-        </StackPanel>
-        <UniformGrid Grid.Row="1" Columns="3">
-            <TextBlock Style="{StaticResource txtStyle}" Text="全局样式文件" />
-            <TextBlock
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontFamily="楷体"
-                FontSize="20"
-                FontWeight="Bold"
-                Foreground="Green"
-                Text="非样式文件" />
-        </UniformGrid>
+        <!--  引入样式  -->
+        <Button
+            Width="100"
+            Height="30"
+            Style="{StaticResource btn1}">
+            普通按钮
+        </Button>
     </Grid>
+
 </Window>

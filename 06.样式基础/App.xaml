@@ -6,10 +6,18 @@
     StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <!--  将其他的样式文件 导入  -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="./styles/ButtonStyle.xaml" />
                 <ResourceDictionary Source="styles/TextBlockStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <!--  直接写样式  -->
+            <Style x:Key="btn1" TargetType="Button">
+                <Setter Property="Foreground" Value="Red" />
+                <Setter Property="Background" Value="White" />
+                <Setter Property="BorderThickness" Value="2" />
+            </Style>
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>

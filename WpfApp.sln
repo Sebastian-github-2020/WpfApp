@@ -113,7 +113,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework测试", "framewor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "51.WpfBlazor", "51.WpfBlazor\51.WpfBlazor.csproj", "{404EBD91-F5CF-44D3-BFA6-40183B093BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "52.转换器Conver", "52.转换器Conver\52.转换器Conver.csproj", "{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "52.转换器Conver", "52.转换器Conver\52.转换器Conver.csproj", "{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "53.MVVM原生代码", "53.MVVM原生代码\53.MVVM原生代码.csproj", "{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -571,6 +573,14 @@ Global
 		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{8627550E-7DEA-4CB1-950B-1F2257A4E4E8}.Release|x86.Build.0 = Release|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Debug|x86.Build.0 = Debug|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Release|x86.ActiveCfg = Release|Any CPU
+		{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
