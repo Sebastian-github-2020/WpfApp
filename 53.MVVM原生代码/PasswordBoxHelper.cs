@@ -13,7 +13,7 @@ namespace _53.MVVM原生代码 {
     /// </summary>
     public class PasswordBoxHelper {
 
-
+        
         public static string GetMyPassword(DependencyObject obj) {
             return (string)obj.GetValue(MyPasswprdProperty);
         }
