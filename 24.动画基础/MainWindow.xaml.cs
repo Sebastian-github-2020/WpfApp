@@ -28,6 +28,7 @@ namespace _24.动画基础 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Btn_Click(object sender, RoutedEventArgs e) {
+
             // 1. 创建动画对象
             DoubleAnimation animation = new DoubleAnimation();
             // 2. 指定起始位置 From和to都可以省略
@@ -36,7 +37,7 @@ namespace _24.动画基础 {
 
             animation.By = -200; // 不指定起始值 使用by ，下面执行动画 指定了 依赖属性 
 
-            //3. 指定动画事件
+            //3. 指定动画运行时间
             animation.Duration = TimeSpan.FromSeconds(1);
             // 4. 动画 反向播放 运行时间也加倍
             animation.AutoReverse = true;

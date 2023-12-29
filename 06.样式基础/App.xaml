@@ -13,7 +13,7 @@
             </ResourceDictionary.MergedDictionaries>
             <!--  直接写样式  -->
             <Style x:Key="btn1" TargetType="Button">
-                <Setter Property="Foreground" Value="Red" />
+                <Setter Property="Foreground" Value="Green" />
                 <Setter Property="Background" Value="White" />
                 <Setter Property="BorderThickness" Value="2" />
             </Style>

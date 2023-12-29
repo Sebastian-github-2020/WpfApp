@@ -63,9 +63,13 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <UniformGrid Columns="3" Rows="3">
+    <UniformGrid
+        Height="300"
+        VerticalAlignment="Top"
+        Columns="3"
+        Rows="3">
         <Button Content="默认按钮" />
-        <Button Content="悬浮改变颜色"   Style="{StaticResource btn}" />
+        <Button Content="悬浮改变颜色" Style="{StaticResource btn}" />
         <TextBox
             Width="200"
             Style="{StaticResource txt}"

@@ -10,11 +10,11 @@ namespace _10.WPF命令 {
     /// </summary>
     internal class MyCommand : System.Windows.Input.ICommand {
         public event EventHandler? CanExecuteChanged;
-        Action executeAction;
-        public MyCommand(Action action) {
+        Action<string?> executeAction;
+        public MyCommand(Action<string?> action) {
             executeAction = action;
         }
-                
+
 
         public bool CanExecute(object? parameter) {
             if(CanExecuteChanged != null) {
@@ -24,7 +24,7 @@ namespace _10.WPF命令 {
         }
 
         public void Execute(object? parameter) {
-            executeAction();
+            executeAction(parameter as string);
         }
     }
 }

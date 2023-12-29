@@ -38,7 +38,7 @@ namespace _09.WPF绑定 {
         /// <param name="e"></param>
         private void check_Checked(object sender, RoutedEventArgs e) {
             var s = sender as CheckBox;
-            Debug.WriteLine($"选中了：{s.IsChecked}");
+            Debug.WriteLine($"选中了：{s?.IsChecked}");
         }
         /// <summary>
         /// 取消的事件
@@ -47,7 +47,7 @@ namespace _09.WPF绑定 {
         /// <param name="e"></param>
         private void check_Unchecked(object sender, RoutedEventArgs e) {
             var s = sender as CheckBox;
-            Debug.WriteLine($"取消选中：{s.IsChecked}");
+            Debug.WriteLine($"取消选中：{s?.IsChecked}");
         }
     }
     class Person {

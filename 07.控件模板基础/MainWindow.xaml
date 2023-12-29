@@ -25,7 +25,7 @@
             </Setter>
         </Style>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD" />
-        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070" />
+        <SolidColorBrush x:Key="Button.Static.Border" Color="Red" />
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD" />
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1" />
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6" />
@@ -91,7 +91,6 @@
             VerticalContentAlignment="Center"
             Background="White"
             BorderBrush="#FF707070"
-            
             BorderThickness="1"
             Content="圆角按钮"
             Foreground="#000000"

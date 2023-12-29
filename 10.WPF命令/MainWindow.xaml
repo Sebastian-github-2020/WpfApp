@@ -11,8 +11,13 @@
     mc:Ignorable="d">
     <Grid>
         <StackPanel>
-            <Button Command="{Binding CommandShow}" Content="命令事件驱动" />
-            <TextBox Text="{Binding Name}" />
+            <TextBox x:Name="inputText" Text="请输入内容" />
+            <!--  命令：常规情况下每一个控件的事件都需要一个新的方法来接收执行，使用命令可以将功能同质化的事件用同一个命令来接收，减少代码量  -->
+            <Button
+                Command="{Binding CommandShow}"
+                CommandParameter="{Binding ElementName=inputText, Path=Text, Mode=Default}"
+                Content="命令事件驱动" />
+            <TextBlock Text="{Binding Name}" />
         </StackPanel>
     </Grid>
 </Window>

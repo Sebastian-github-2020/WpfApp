@@ -10,15 +10,15 @@
     Height="450"
     mc:Ignorable="d">
     <Window.Resources>
-        <!--  自定义样式  -->
-        <Style x:Key="btn" TargetType="Button">
+        <!--  自定义样式 不指定key就是针对所有的button  -->
+        <Style TargetType="Button">
             <Setter Property="Foreground" Value="Red" />
             <Setter Property="Background" Value="White" />
             <Setter Property="BorderThickness" Value="2" />
         </Style>
     </Window.Resources>
     <Grid>
-        <!--  引入样式  -->
+        <!--  这里引入的是全局样式 在app.xaml里面的  -->
         <Button
             Width="100"
             Height="30"

@@ -30,10 +30,10 @@ namespace _10.WPF命令 {
 
         //public event PropertyChangedEventHandler? PropertyChanged;
 
-        public void Show() {
+        public void Show(string? name) {
             // 这里直接修改 ，不会显示到界面上，因为没有同步更新，
             // 为了同步更新 需要实现INotifyPropertyChanged 接口
-            Name = "哈哈哈";
+            Name = name ?? "哈哈哈";
             MessageBox.Show("点击按钮");
         }
     }

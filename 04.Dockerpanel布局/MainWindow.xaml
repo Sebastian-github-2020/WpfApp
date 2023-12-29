@@ -1,35 +1,51 @@
-﻿<Window x:Class="_04.Dockerpanel布局.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:_04.Dockerpanel布局"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="MainWindow"
-        Width="800"
-        Height="450"
-        mc:Ignorable="d">
+﻿<Window
+    x:Class="_04.Dockerpanel布局.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:_04.Dockerpanel布局"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
     <Grid>
         <DockPanel LastChildFill="True">
-            <Button Content="按left钮"
-                    DockPanel.Dock="Left"
-                    FontSize="30"
-                    FontWeight="Bold" />
-            <Button Content="按钮right"
-                    DockPanel.Dock="Right"
-                    FontSize="30"
-                    FontWeight="Bold" />
-            <Button Content="按钮"
-                    DockPanel.Dock="Bottom"
-                    FontSize="30"
-                    FontWeight="Bold" />
-            <Button Content="按钮"
-                    DockPanel.Dock="Top"
-                    FontSize="30"
-                    FontWeight="Bold" />
-            <Button Background="Red"
-                    Content="按钮"
-                    FontSize="30"
-                    FontWeight="Bold" />
+            <Button
+                Content="按left钮"
+                DockPanel.Dock="Left"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Content="按钮right"
+                DockPanel.Dock="Right"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Content="底部按钮"
+                DockPanel.Dock="Bottom"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Content="顶部按钮"
+                DockPanel.Dock="Top"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Background="Red"
+                Content="按钮"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Background="Blue"
+                Content="按钮"
+                FontSize="30"
+                FontWeight="Bold" />
+            <Button
+                Background="Yellow"
+                Content="最后一个控件回填充剩余空间"
+                FontSize="30"
+                FontWeight="Bold" />
         </DockPanel>
     </Grid>
 </Window>
