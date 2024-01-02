@@ -21,6 +21,7 @@ namespace _24.动画基础 {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+
         }
         /// <summary>
         /// 按钮点击事件
@@ -53,6 +54,20 @@ namespace _24.动画基础 {
 
 
 
+        }
+
+        private void zk_Click(object sender, RoutedEventArgs e) {
+            if(this.sh.Visibility == Visibility.Hidden) {
+                this.sh.Visibility = Visibility.Visible;
+            }
+            this.zk.Visibility = Visibility.Hidden;
+        }
+
+        private void sh_Click(object sender, RoutedEventArgs e) {
+            if(this.zk.Visibility == Visibility.Hidden) {
+                this.zk.Visibility = Visibility.Visible;
+            }
+            this.sh.Visibility = Visibility.Hidden;
         }
     }
 }
