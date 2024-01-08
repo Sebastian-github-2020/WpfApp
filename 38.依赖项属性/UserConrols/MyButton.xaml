@@ -23,9 +23,16 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Orientation="Horizontal">
-                                <TextBlock Text="icon" />
+                                <Image
+                                    Width="30"
+                                    Height="30"
+                                    Source="{Binding ElementName=uc, Path=ImageUrl}" />
+
+                                <!--<TextBlock Text="{Binding ElementName=uc, Path=Title}" />-->
                                 <!--  注意这里不能使用 templateBingding Title不是静态成员，依赖属性有可能不存在  -->
-                                <ContentPresenter />
+                                <Border Background="Red">
+                                    <ContentPresenter VerticalAlignment="Center" />
+                                </Border>
                             </StackPanel>
                         </Border>
                     </ControlTemplate>
@@ -34,6 +41,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
+        <!--  这里指定了绑定的元素，绑定指定元素的依赖属性  -->
         <Button Content="{Binding ElementName=uc, Path=Title}" Style="{StaticResource btn}" />
     </Grid>
 </UserControl>

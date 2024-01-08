@@ -23,9 +23,10 @@
     </Window.Resources>
 
 
-    <UniformGrid Rows="3">
+    <UniformGrid Rows="4">
         <Button Background="{StaticResource background.primary}" Content="主题色" />
         <Button Background="{StaticResource background.red}" Content="背景色" />
         <Button Background="{StaticResource normal}" Content="图像资源" />
+        <Image Source="Images/1.jpg" />
     </UniformGrid>
 </Window>

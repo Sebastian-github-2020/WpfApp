@@ -52,5 +52,20 @@ namespace _38.依赖项属性.UserConrols {
         }
 
         public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(MyButton), new PropertyMetadata("默认值"));
+
+
+        // 图片地址的依赖属性
+
+
+        public ImageSource ImageUrl {
+            get { return (ImageSource)GetValue(ImageUrlProperty); }
+            set { SetValue(ImageUrlProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ImageUrl.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageUrlProperty =
+            DependencyProperty.Register("ImageUrl", typeof(ImageSource), typeof(MyButton), new PropertyMetadata(null));
+
+
     }
 }
