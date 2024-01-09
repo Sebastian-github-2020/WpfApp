@@ -26,8 +26,6 @@
                     Foreground="Red"
                     MyIcon="Images/icon.png" />
 
-
-
             </StackPanel>
         </GroupBox>
 
