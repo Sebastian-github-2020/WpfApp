@@ -15,20 +15,19 @@
 
         <GroupBox>
             <GroupBox.Header>
-                <TextBlock Text="自定义按钮" />
+                <TextBlock Background="Cyan" Text="自定义按钮" />
             </GroupBox.Header>
             <StackPanel Background="Cyan" Orientation="Horizontal">
+
                 <LC:LCButton Title="默认按钮" />
                 <LC:LCButton
-                    Title="带图标按钮asdadaadas "
+                    Title="带图标按钮"
                     Background="Yellow"
                     Foreground="Red"
                     MyIcon="Images/icon.png" />
-                <LC:LCButton
-                    Title="嘿嘿"
-                    Background="Yellow"
-                    Foreground="Red"
-                    MyIcon="Images/icon.png" />
+
+
+
             </StackPanel>
         </GroupBox>
 
