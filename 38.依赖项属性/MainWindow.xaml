@@ -11,7 +11,14 @@
     Height="450"
     mc:Ignorable="d">
     <UniformGrid Columns="3" Rows="3">
-        <user:MyButton Title="依赖属性吗1" ImageUrl="Images/1.png" />
+        <user:MyButton
+            Title="依赖属性吗1"
+            Width="130"
+            Height="60"
+            Padding="10"
+            FontSize="11"
+            FontWeight="Light"
+            ImageUrl="Images/1.png" />
         <user:MyButton Title="{Binding Name}" />
         <TextBlock Text="{Binding Name}" />
     </UniformGrid>

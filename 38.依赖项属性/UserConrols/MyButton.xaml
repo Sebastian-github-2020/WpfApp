@@ -11,6 +11,8 @@
     mc:Ignorable="d">
     <UserControl.Resources>
         <Style x:Key="btn" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Background" Value="White" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -30,14 +32,17 @@
 
                                 <!--<TextBlock Text="{Binding ElementName=uc, Path=Title}" />-->
                                 <!--  注意这里不能使用 templateBingding Title不是静态成员，依赖属性有可能不存在  -->
-                                <Border Background="Red">
-                                    <ContentPresenter VerticalAlignment="Center" />
-                                </Border>
+                                <ContentPresenter VerticalAlignment="Center" />
                             </StackPanel>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightCyan" />
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </UserControl.Resources>
     <Grid>

@@ -17,7 +17,7 @@
             <GroupBox.Header>
                 <TextBlock Text="自定义按钮" />
             </GroupBox.Header>
-            <StackPanel Background="Red" Orientation="Horizontal">
+            <StackPanel Background="Cyan" Orientation="Horizontal">
                 <LC:LCButton Title="默认按钮" />
                 <LC:LCButton
                     Title="带图标按钮asdadaadas "
