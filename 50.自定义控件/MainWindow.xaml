@@ -22,8 +22,9 @@
                 <LC:LCButton Title="默认按钮" />
                 <LC:LCButton
                     Title="带图标按钮"
-                    Background="Yellow"
-                    Foreground="Red"
+                    Background="{StaticResource primary}"
+                    CornerRadius="15"
+                    Foreground="{StaticResource light}"
                     MyIcon="Images/icon.png" />
 
             </StackPanel>

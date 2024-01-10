@@ -9,7 +9,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Themes/LCButton.xaml" />
 
-                <ResourceDictionary Source="Themes/LCButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Themes/GenericColors.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
