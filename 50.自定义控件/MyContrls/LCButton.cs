@@ -43,13 +43,13 @@ namespace _50.自定义控件.MyContrls {
     ///     <MyNamespace:LCButton/>
     ///
     /// </summary>
-    public class LCButton : Control {
+    public class LCButton : Button {
 
-        public Object Content {
+        public new Object Content {
             get { return (Object)GetValue(ContentProperty); }
             set { SetValue(ContentProperty, value); }
         }
-        public readonly static DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(LCButton), new PropertyMetadata(null));
+        public new readonly static DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(LCButton), new PropertyMetadata(null));
 
 
 
