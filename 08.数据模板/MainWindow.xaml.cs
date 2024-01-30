@@ -27,7 +27,8 @@ namespace _08.数据模板 {
             test.Add(new Color() { Code = "	#DB7093", Name = "PaleVioletRed" });
             test.Add(new Color() { Code = "	#FF69B4", Name = "HotPink" });
             test.Add(new Color() { Code = "	#FF1493", Name = "DeepPink" });
-            list.ItemsSource = test;
+            //list.ItemsSource = test;
+            this.DataContext = test;
         }
         public struct Color {
             public string Code { get; set; }

@@ -117,7 +117,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "52.转换器Conver", "52.�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "53.MVVM原生代码", "53.MVVM原生代码\53.MVVM原生代码.csproj", "{7DEABA27-5C16-4C7B-A41C-2BE1A4B32913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "54.用户控件", "54.用户控件\54.用户控件.csproj", "{868AD0BF-84F3-4538-96FB-14ABE05182D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "54.用户控件", "54.用户控件\54.用户控件.csproj", "{868AD0BF-84F3-4538-96FB-14ABE05182D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "55.DispatchObject", "55.DispatchObject\55.DispatchObject.csproj", "{AEE94C6F-90B8-456C-9D01-16778DEFD825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -591,6 +593,14 @@ Global
 		{868AD0BF-84F3-4538-96FB-14ABE05182D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{868AD0BF-84F3-4538-96FB-14ABE05182D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{868AD0BF-84F3-4538-96FB-14ABE05182D9}.Release|x86.Build.0 = Release|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Debug|x86.Build.0 = Debug|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Release|x86.ActiveCfg = Release|Any CPU
+		{AEE94C6F-90B8-456C-9D01-16778DEFD825}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
