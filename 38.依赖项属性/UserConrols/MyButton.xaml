@@ -5,22 +5,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:_38.依赖项属性.UserConrols"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="uc"
+    x:Name="uc"    
+    Background="Transparent"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
     <UserControl.Resources>
         <Style x:Key="btn" TargetType="Button">
             <Setter Property="Cursor" Value="Hand" />
-            <Setter Property="Background" Value="White" />
+            <!--<Setter Property="Background" Value="White" />-->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
                             Width="{TemplateBinding Width}"
-                            Height="{TemplateBinding Height}"
-                            Background="{TemplateBinding Background}"
-                            CornerRadius="5">
+                            Height="{TemplateBinding Height}"                           
+                            Background="{Binding ElementName=uc,Path=BtnBgc}"
+                            CornerRadius="10">
                             <StackPanel
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
@@ -45,8 +46,8 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Background="Transparent">
         <!--  这里指定了绑定的元素，绑定指定元素的依赖属性  -->
-        <Button Content="{Binding ElementName=uc, Path=Title}" Style="{StaticResource btn}" />
+        <Button  Content="{Binding ElementName=uc, Path=Content}"   Style="{StaticResource btn}" />
     </Grid>
 </UserControl>

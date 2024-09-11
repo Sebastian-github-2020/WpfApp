@@ -6,54 +6,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="MainWindow"
         Width="800"
-        Height="450"
+        Height="650"
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
-            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border Background="#7671D8" />
+        <!--顶部header-->
+        <Border Background="#7278DB" Grid.Row="0"/>
+        <!--内容区域-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition />
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Border Background="Yellow" />
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.8*" />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Border Background="AliceBlue" />
-                <Border Grid.Column="1" Background="Violet" />
-                <Border Grid.Column="2" Background="Aquamarine" />
-                <Border Grid.Column="3" Background="Bisque" />
-                <Border Grid.Column="4" Background="BurlyWood" />
-                <Border Grid.Row="1"
-                        Grid.ColumnSpan="3"
-                        Background="BurlyWood" />
-                <Border Grid.Row="1"
-                        Grid.Column="3"
-                        Grid.ColumnSpan="2"
-                        Background="Beige" />
+            <!--左侧菜单-->
+            <Border Grid.Column="0" Background="Bisque"/>
+            <!--右侧内容区域-->
+            <Border Background="#F7F7F7" Grid.Column="1" Padding="5">
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition />
+                        <RowDefinition Height="5"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!--第一行内容-->
+                    <Border Background="#7577DB" Grid.Column="0" Grid.Row="1" Margin="0 0 5 0"/>
+                    <Border Background="#4599CA" Grid.Column="1" Grid.Row="1" Margin="0 0 5 0"/>
+                    <Border Background="#DD81D2" Grid.Column="2" Grid.Row="1" Margin="0 0 5 0"/>
+                    <Border Background="#4FB8B7" Grid.Column="3" Grid.Row="1" Margin="0 0 5 0"/>
+                    <Border Background="#E27980" Grid.Column="4" Grid.Row="1"/>
+                    <!--第二行内容-->
+                    <Border Background="Green" Grid.Row="3" Grid.ColumnSpan="3" Margin="0 0 5 0"/>
+                    <Border Background="Blue" Grid.Row="3"  Grid.Column="3" Grid.ColumnSpan="2"/>
 
-                <Border Grid.Row="2"
-                        Grid.ColumnSpan="3"
-                        Background="Bisque" />
-                <Border Grid.Row="2"
-                        Grid.Column="3"
-                        Grid.ColumnSpan="2"
-                        Background="NavajoWhite" />
-            </Grid>
+                    <!--第三行内容-->
+                    <Border Background="Green" Grid.Row="5" Grid.ColumnSpan="3" Margin="0 0 5 0"/>
+                    <Border Background="Blue" Grid.Row="5"  Grid.Column="3" Grid.ColumnSpan="2"/>
+
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Window>

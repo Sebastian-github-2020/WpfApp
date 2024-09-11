@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace _38.依赖项属性.UserConrols {
+namespace _38.依赖项属性.UserConrols
+{
     /// <summary>
     /// MyButton.xaml 的交互逻辑
     /// </summary>
-    public partial class MyButton : UserControl {
-        public MyButton() {
+    public partial class MyButton : UserControl
+    {
+        public MyButton()
+        {
             InitializeComponent();
         }
 
@@ -30,23 +21,26 @@ namespace _38.依赖项属性.UserConrols {
 
 
         // 1.使用覆盖 userControl content的方式
-        public new Object Content {
-            get {
-                Debug.WriteLine(GetValue(ContentProperty));
-                return (Object)GetValue(ContentProperty);
+        public new object Content
+        {
+            get
+            {
+                System.Diagnostics.Debug.WriteLine(GetValue(ContentProperty));
+                return (object)GetValue(ContentProperty);
             }
             set { SetValue(ContentProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Content.  This enables animation, styling, binding, etc...
         public new static readonly DependencyProperty ContentProperty =
-            DependencyProperty.Register("Content", typeof(Object), typeof(MyButton), new PropertyMetadata(null));
+            DependencyProperty.Register("Content", typeof(object), typeof(MyButton), new PropertyMetadata(null));
 
 
 
 
         // 新建一个依赖属性 来接收 绑定的内容
-        public string Title {
+        public string Title
+        {
             get { return (string)GetValue(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
@@ -57,7 +51,8 @@ namespace _38.依赖项属性.UserConrols {
         // 图片地址的依赖属性
 
 
-        public ImageSource ImageUrl {
+        public ImageSource ImageUrl
+        {
             get { return (ImageSource)GetValue(ImageUrlProperty); }
             set { SetValue(ImageUrlProperty, value); }
         }
@@ -65,6 +60,38 @@ namespace _38.依赖项属性.UserConrols {
         // Using a DependencyProperty as the backing store for ImageUrl.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ImageUrlProperty =
             DependencyProperty.Register("ImageUrl", typeof(ImageSource), typeof(MyButton), new PropertyMetadata(null));
+
+
+
+        // 按钮的圆角
+        public CornerRadius BntRadio
+        {
+            get { return (CornerRadius)GetValue(BntRadioProperty); }
+            set { SetValue(BntRadioProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for BntRadio.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BntRadioProperty =
+            DependencyProperty.Register("BntRadio", typeof(int), typeof(MyButton), new PropertyMetadata(null));
+
+
+
+
+
+
+        public SolidColorBrush BtnBgc
+        {
+            get { return (SolidColorBrush)GetValue(BtnBgcProperty); }
+            set { SetValue(BtnBgcProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for BtnBgc.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BtnBgcProperty =
+            DependencyProperty.Register("BtnBgc", typeof(SolidColorBrush), typeof(MyButton), new PropertyMetadata(null));
+
+
+
+
 
 
     }

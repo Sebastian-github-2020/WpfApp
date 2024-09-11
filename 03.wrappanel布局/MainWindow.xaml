@@ -9,7 +9,7 @@
         Height="450"
         mc:Ignorable="d">
     <WrapPanel Width="420" Background="AntiqueWhite">
-        <Button Width="100"
+        <Button MinWidth="100"
                 Height="50"
                 Content="按钮" />
         <Button Width="100"

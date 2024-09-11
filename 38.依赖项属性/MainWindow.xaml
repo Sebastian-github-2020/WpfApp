@@ -10,16 +10,27 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <UniformGrid Columns="3" Rows="3">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <user:MyButton
-            Title="依赖属性吗1"
-            Width="130"
-            Height="60"
-            Padding="10"
-            FontSize="11"
-            FontWeight="Light"
-            ImageUrl="Images/1.png" />
-        <user:MyButton Title="{Binding Name}" />
-        <TextBlock Text="{Binding Name}" />
-    </UniformGrid>
+     Content="自定义控件的新增依赖项属性"
+     MinWidth="130"
+     Height="60"
+     Padding="10"
+     FontSize="11"
+     FontWeight="Light"
+     ImageUrl="Images/1.png" />
+
+        <user:MyButton Title="{Binding Name}" Grid.Row="1" BorderThickness="15" Height="150"  BtnBgc="Blue" >
+            <StackPanel>
+                <TextBlock FontFamily="黑体" FontSize="30" Foreground="White" Padding="20">司法系统是不保护老实人的！</TextBlock>
+            </StackPanel>
+        </user:MyButton>
+
+        <Border BorderBrush="Red" Width="100" Grid.Row="2" Background="Red" Height="30" CornerRadius="5"/>
+    </Grid>
 </Window>
